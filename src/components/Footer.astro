@@ -48,7 +48,13 @@ const year = new Date().getFullYear();
           </a>
         </li>
         <li>
-          <a class="plm-btn-pink !px-5 !py-2.5 text-xs sm:text-sm" href="/resume.pdf" download> Resume PDF </a>
+          <a
+            class="plm-btn-pink !px-5 !py-2.5 text-xs sm:text-sm"
+            href={`${import.meta.env.BASE_URL}resume.pdf`}
+            download
+          >
+            Resume PDF
+          </a>
         </li>
       </ul>
     </div>

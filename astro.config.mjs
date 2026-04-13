@@ -6,8 +6,9 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
-  // Set to your production URL for absolute Open Graph URLs. For GitHub Pages at /<repo>/, also set base: '/<repo>/'.
+  // GitHub Pages project site: https://<user>.github.io/<repo>/
   site: 'https://ispilledmymilk.github.io',
+  base: '/me/',
   vite: {
     plugins: [tailwindcss()]
   }
