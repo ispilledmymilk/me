@@ -1,0 +1,58 @@
+---
+import type { Contact, HeroContent } from '../data/resume';
+
+interface Props {
+  hero: HeroContent;
+  contact: Contact;
+}
+
+const { hero, contact } = Astro.props;
+---
+
+<section
+  id="top"
+  class="scroll-mt-24 border-b border-plm-ink/10 bg-plm-white/80 py-16 sm:py-24"
+  aria-labelledby="hero-heading"
+>
+  <div class="relative mx-auto max-w-4xl px-4 sm:px-6">
+    <div class="pointer-events-none absolute right-4 top-4 hidden text-4xl sm:block" aria-hidden="true">✦</div>
+    <p class="plm-sticker max-w-lg">{hero.sticker}</p>
+
+    <h1
+      id="hero-heading"
+      class="mt-8 font-serif text-[clamp(2.1rem,5.5vw,3.5rem)] font-semibold leading-[1.12] tracking-tight text-plm-ink"
+    >
+      {hero.headline.before}
+      <mark class="rounded-md bg-plm-pink-deep/90 px-1.5 py-0.5 text-[0.95em] text-plm-ink decoration-0">
+        {hero.headline.highlight}
+      </mark>
+      {hero.headline.after}
+    </h1>
+
+    <p class="mt-6 max-w-2xl text-base leading-relaxed text-plm-muted sm:text-lg">
+      {hero.tagline}
+    </p>
+
+    <div class="mt-10 flex flex-wrap items-center gap-3">
+      <a href="#meet" class="plm-btn-pink"> Book a meeting </a>
+      <a href={`mailto:${contact.email}`} class="plm-btn-outline"> Email me </a>
+      <a
+        href={contact.linkedin.href}
+        class="plm-btn-outline"
+        rel="noreferrer"
+        target="_blank"
+      >
+        {contact.linkedin.label}
+      </a>
+      <a
+        href={contact.github.href}
+        class="plm-btn-outline"
+        rel="noreferrer"
+        target="_blank"
+      >
+        {contact.github.label}
+      </a>
+      <a href="/resume.pdf" class="plm-btn-mint" download> Resume (PDF) </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+---
+import type { ExtracurricularItem } from '../data/resume';
+
+interface Props {
+  item: ExtracurricularItem;
+  variant: 'pink' | 'sky' | 'mint';
+}
+
+const { item, variant } = Astro.props;
+const tone =
+  variant === 'pink' ? 'plm-card-pink' : variant === 'sky' ? 'plm-card-sky' : 'plm-card-mint';
+---
+
+<article class:list={[tone]}>
+  <div class="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
+    <div>
+      <h3 class="font-serif text-xl font-semibold text-plm-ink">{item.title}</h3>
+      <p class="mt-0.5 text-sm font-semibold text-plm-ink/90">
+        {item.org}
+        <span class="font-normal text-plm-muted"> · {item.location}</span>
+      </p>
+    </div>
+    <p class="font-mono text-xs text-plm-muted sm:text-sm">{item.dates}</p>
+  </div>
+  <ul
+    class="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-plm-muted marker:text-plm-mint-deep"
+  >
+    {item.bullets.map((b) => (
+      <li>{b}</li>
+    ))}
+  </ul>
+</article>

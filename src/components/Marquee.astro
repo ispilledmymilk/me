@@ -1,0 +1,37 @@
+---
+interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+const chunks = Array.from({ length: 10 }, () => text);
+---
+
+<div
+  class="border-y border-plm-ink/10 bg-plm-mint/70 py-3 text-plm-ink/85"
+  role="presentation"
+  aria-hidden="true"
+>
+  <div class="overflow-hidden">
+    <div class="plm-marquee-track">
+      <div class="flex shrink-0 items-center gap-14 px-6">
+        {
+          chunks.map(() => (
+            <span class="whitespace-nowrap font-mono text-[11px] font-semibold uppercase tracking-[0.2em]">
+              {text}
+            </span>
+          ))
+        }
+      </div>
+      <div class="flex shrink-0 items-center gap-14 px-6" aria-hidden="true">
+        {
+          chunks.map(() => (
+            <span class="whitespace-nowrap font-mono text-[11px] font-semibold uppercase tracking-[0.2em]">
+              {text}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>

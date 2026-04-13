@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteNav from '../components/SiteNav.astro';
+import Hero from '../components/Hero.astro';
+import Marquee from '../components/Marquee.astro';
+import BookingSection from '../components/BookingSection.astro';
+import Section from '../components/Section.astro';
+import ExperienceCard from '../components/ExperienceCard.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import SkillChips from '../components/SkillChips.astro';
+import ExtracurricularCard from '../components/ExtracurricularCard.astro';
+import Footer from '../components/Footer.astro';
+import { resume } from '../data/resume';
+
+const pageTitle = `${resume.hero.name} · Portfolio`;
+const pageDescription = resume.hero.tagline;
+
+const tones = ['pink', 'sky', 'mint'] as const;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <div class="relative z-10">
+    <SiteNav />
+    <main>
+      <Hero hero={resume.hero} contact={resume.contact} />
+      <Marquee text={resume.booking.marqueeText} />
+      <Section id="experience" title="Experience" eyebrow="Work">
+        {resume.experience.map((item, i) => (
+          <ExperienceCard item={item} variant={tones[i % 3]} />
+        ))}
+      </Section>
+      <Section id="projects" title="Projects" eyebrow="Selected work">
+        {resume.projects.map((item, i) => (
+          <ProjectCard item={item} variant={tones[i % 3]} />
+        ))}
+      </Section>
+      <Section id="education" title="Education" eyebrow="Academics">
+        {
+          resume.education.map((edu) => (
+            <article class="plm-card-sky">
+              <h3 class="font-serif text-xl font-semibold text-plm-ink">{edu.school}</h3>
+              <p class="mt-1 text-sm font-semibold text-plm-ink/90">{edu.credential}</p>
+              <p class="mt-2 text-sm text-plm-muted">
+                {edu.location} · {edu.dates}
+              </p>
+            </article>
+          ))
+        }
+      </Section>
+      <Section id="skills" title="Skills" eyebrow="Toolkit">
+        <SkillChips groups={resume.skills} />
+      </Section>
+      <Section id="extracurriculars" title="Leadership & community" eyebrow="Beyond the desk">
+        {resume.extracurriculars.map((item, i) => (
+          <ExtracurricularCard item={item} variant={tones[i % 3]} />
+        ))}
+      </Section>
+      <Section id="certifications" title="Certifications & awards" eyebrow="Recognition">
+        <article class="plm-card-pink">
+          <ul class="list-disc space-y-3 pl-5 text-sm leading-relaxed text-plm-muted marker:text-plm-pink-deep">
+            {resume.certifications.map((line) => (
+              <li>{line}</li>
+            ))}
+          </ul>
+        </article>
+      </Section>
+      <BookingSection booking={resume.booking} contactEmail={resume.contact.email} />
+    </main>
+    <Footer contact={resume.contact} />
+  </div>
+</BaseLayout>

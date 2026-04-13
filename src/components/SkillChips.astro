@@ -1,0 +1,28 @@
+---
+import type { SkillGroup } from '../data/resume';
+
+interface Props {
+  groups: SkillGroup[];
+}
+
+const { groups } = Astro.props;
+---
+
+<div class="plm-card bg-plm-white">
+  {
+    groups.map((group) => (
+      <div class="border-b border-plm-ink/5 py-5 first:pt-0 last:border-b-0 last:pb-0">
+        <h3 class="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-plm-muted">
+          {group.label}
+        </h3>
+        <ul class="mt-3 flex flex-wrap gap-2" aria-label={group.label}>
+          {group.items.map((item) => (
+            <li class="rounded-full border border-plm-ink/10 bg-plm-pink/35 px-3 py-1.5 text-xs font-medium text-plm-ink">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))
+  }
+</div>
