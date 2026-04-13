@@ -1,14 +1,8 @@
 ---
-import { navLinks, resume } from '../data/resume';
+import { navLinks } from '../data/resume';
+import { getBookingsUrl } from '../lib/bookings';
 
-const scheduleUrl =
-  (import.meta.env.PUBLIC_BOOKING_SCHEDULE_URL as string | undefined)?.trim() ||
-  resume.booking.scheduleUrl;
-const calendlyEventUrl =
-  (import.meta.env.PUBLIC_CALENDLY_EVENT_URL as string | undefined)?.trim() ||
-  (resume.booking.calendlyEventUrl?.trim() ?? '');
-const bookHref = scheduleUrl || calendlyEventUrl || '#meet';
-const bookIsExternal = Boolean(scheduleUrl || calendlyEventUrl);
+const bookHref = getBookingsUrl();
 ---
 
 <header
@@ -44,8 +38,8 @@ const bookIsExternal = Boolean(scheduleUrl || calendlyEventUrl);
     <a
       href={bookHref}
       class="inline-flex items-center gap-2 rounded-full bg-plm-mint px-4 py-2.5 text-xs font-semibold uppercase tracking-wide text-plm-ink shadow-sm transition duration-200 hover:scale-[1.04] hover:bg-plm-mint-deep active:scale-[0.98] sm:text-[11px]"
-      rel={bookIsExternal ? 'noreferrer' : undefined}
-      target={bookIsExternal ? '_blank' : undefined}
+      rel="noreferrer"
+      target="_blank"
     >
       <span class="h-2 w-2 shrink-0 animate-pulse rounded-full bg-plm-pink-deep" aria-hidden="true" />
       Book a call

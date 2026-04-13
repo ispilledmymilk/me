@@ -1,5 +1,6 @@
 ---
 import type { Contact, HeroContent } from '../data/resume';
+import { getBookingsUrl } from '../lib/bookings';
 
 interface Props {
   hero: HeroContent;
@@ -7,6 +8,7 @@ interface Props {
 }
 
 const { hero, contact } = Astro.props;
+const bookingsUrl = getBookingsUrl();
 ---
 
 <section
@@ -42,7 +44,7 @@ const { hero, contact } = Astro.props;
     </p>
 
     <div class="plm-stagger-4 mt-10 flex flex-wrap items-center gap-3">
-      <a href="#meet" class="plm-btn-pink"> Book a meeting </a>
+      <a href={bookingsUrl} class="plm-btn-pink" rel="noreferrer" target="_blank"> Book a meeting </a>
       <a href={`mailto:${contact.email}`} class="plm-btn-outline"> Email me </a>
       <a
         href={contact.linkedin.href}

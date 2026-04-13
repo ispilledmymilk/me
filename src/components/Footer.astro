@@ -1,11 +1,13 @@
 ---
 import type { Contact } from '../data/resume';
+import { getBookingsUrl } from '../lib/bookings';
 
 interface Props {
   contact: Contact;
 }
 
 const { contact } = Astro.props;
+const bookingsUrl = getBookingsUrl();
 const year = new Date().getFullYear();
 ---
 
@@ -19,9 +21,19 @@ const year = new Date().getFullYear();
     >
       <p class="font-serif text-3xl font-semibold tracking-tight text-plm-ink sm:text-4xl">That’s a wrap.</p>
       <p class="mt-3 max-w-prose text-base leading-relaxed text-plm-muted">
-        Thanks for stopping by — connect below or book time in the Meet section.
+        Thanks for stopping by — connect below or grab a slot on my scheduling page.
       </p>
       <ul class="mt-8 flex flex-wrap gap-3">
+        <li>
+          <a
+            class="plm-btn-mint !px-5 !py-2.5 text-xs sm:text-sm"
+            href={bookingsUrl}
+            rel="noreferrer"
+            target="_blank"
+          >
+            Book a call
+          </a>
+        </li>
         <li>
           <a class="plm-btn-outline !px-5 !py-2.5 text-xs sm:text-sm" href={`mailto:${contact.email}`}>
             Email

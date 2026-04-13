@@ -22,15 +22,8 @@ export interface HeroContent {
 }
 
 export interface BookingConfig {
-  /** Calendly / Cal.com / Google Appointment page (opens in new tab from buttons). Optional: PUBLIC_BOOKING_SCHEDULE_URL */
-  scheduleUrl: string;
-  /**
-   * Full Calendly scheduling URL for the inline widget (e.g. https://calendly.com/you/30min).
-   * Optional: PUBLIC_CALENDLY_EVENT_URL in .env
-   */
-  calendlyEventUrl: string | null;
-  /** Generic iframe embed (e.g. Cal.com …/embed). Used only if calendlyEventUrl is empty. Optional: PUBLIC_BOOKING_IFRAME_URL */
-  iframeSrc: string | null;
+  /** Public scheduling page (Calendly, Cal.com, …). Override: `PUBLIC_BOOKINGS_URL` */
+  bookingsUrl: string;
   sticker: string;
   title: string;
   description: string;
@@ -109,13 +102,12 @@ export const resume: Resume = {
     },
   },
   booking: {
-    scheduleUrl: 'https://calendly.com/ispilledmymilk',
-    calendlyEventUrl: 'https://calendly.com/ispilledmymilk',
-    iframeSrc: null,
+    bookingsUrl:
+      'https://outlook.office.com/bookwithme/user/f92eabac618d40b0b5a7190f01425a43@uwaterloo.ca/meetingtype/W33sTLmNqUaWLWMrW0REuw2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile',
     sticker: 'COFFEE CHATS · RECRUITING · COLLABS',
-    title: 'Book time with me',
+    title: 'Let’s connect',
     description:
-      'Schedule a quick call for recruiting, mentorship, or collaboration. If no calendar is connected yet, use email — I respond fast.',
+      'For recruiting, mentorship, or collaboration — grab a slot on my scheduling page, or email me if you prefer to start there.',
     marqueeText:
       'BUILD RELIABLE SYSTEMS · AUTOMATE THE BORING PARTS · SHIP WITH CONFIDENCE · OPEN TO RECRUITMENT · ',
   },
