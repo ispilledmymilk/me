@@ -4,11 +4,15 @@ import { navLinks, resume } from '../data/resume';
 const scheduleUrl =
   (import.meta.env.PUBLIC_BOOKING_SCHEDULE_URL as string | undefined)?.trim() ||
   resume.booking.scheduleUrl;
-const bookHref = scheduleUrl || '#meet';
+const calendlyEventUrl =
+  (import.meta.env.PUBLIC_CALENDLY_EVENT_URL as string | undefined)?.trim() ||
+  (resume.booking.calendlyEventUrl?.trim() ?? '');
+const bookHref = scheduleUrl || calendlyEventUrl || '#meet';
+const bookIsExternal = Boolean(scheduleUrl || calendlyEventUrl);
 ---
 
 <header
-  class="sticky top-0 z-[60] border-b border-plm-ink/10 bg-plm-white/90 backdrop-blur-md"
+  class="sticky top-0 z-[60] border-b border-plm-ink/10 bg-plm-white/90 shadow-sm backdrop-blur-md transition-shadow duration-300 hover:shadow-md"
 >
   <nav
     class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6"
@@ -16,9 +20,10 @@ const bookHref = scheduleUrl || '#meet';
   >
     <a
       href="#top"
-      class="font-serif text-xl font-semibold tracking-tight text-plm-ink lowercase hover:text-plm-muted"
+      class="group font-serif text-lg font-semibold tracking-tight text-plm-ink transition hover:text-plm-muted sm:text-xl"
+      aria-label="Sai — home"
     >
-      spk.
+      Sai<span class="plm-brand-heart" aria-hidden="true">❤️</span>
     </a>
     <ul
       class="flex flex-1 flex-wrap items-center justify-center gap-x-1 gap-y-2 font-sans text-xs font-semibold uppercase tracking-wider text-plm-muted sm:gap-x-3 sm:text-[11px]"
@@ -28,7 +33,7 @@ const bookHref = scheduleUrl || '#meet';
           <li>
             <a
               href={href}
-              class="rounded-full px-2 py-1.5 text-plm-ink/80 transition hover:bg-plm-pink/50 hover:text-plm-ink"
+              class="rounded-full px-2 py-1.5 text-plm-ink/80 transition duration-200 hover:scale-105 hover:bg-plm-pink/50 hover:text-plm-ink"
             >
               {label}
             </a>
@@ -38,11 +43,11 @@ const bookHref = scheduleUrl || '#meet';
     </ul>
     <a
       href={bookHref}
-      class="inline-flex items-center gap-2 rounded-full bg-plm-mint px-4 py-2.5 text-xs font-semibold uppercase tracking-wide text-plm-ink shadow-sm transition hover:bg-plm-mint-deep sm:text-[11px]"
-      rel={scheduleUrl ? 'noreferrer' : undefined}
-      target={scheduleUrl ? '_blank' : undefined}
+      class="inline-flex items-center gap-2 rounded-full bg-plm-mint px-4 py-2.5 text-xs font-semibold uppercase tracking-wide text-plm-ink shadow-sm transition duration-200 hover:scale-[1.04] hover:bg-plm-mint-deep active:scale-[0.98] sm:text-[11px]"
+      rel={bookIsExternal ? 'noreferrer' : undefined}
+      target={bookIsExternal ? '_blank' : undefined}
     >
-      <span class="h-2 w-2 shrink-0 rounded-full bg-plm-pink-deep" aria-hidden="true" />
+      <span class="h-2 w-2 shrink-0 animate-pulse rounded-full bg-plm-pink-deep" aria-hidden="true" />
       Book a call
     </a>
   </nav>

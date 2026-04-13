@@ -22,9 +22,14 @@ export interface HeroContent {
 }
 
 export interface BookingConfig {
-  /** Calendly / Cal.com / Google Appointment page. Optional: use PUBLIC_BOOKING_SCHEDULE_URL in .env */
+  /** Calendly / Cal.com / Google Appointment page (opens in new tab from buttons). Optional: PUBLIC_BOOKING_SCHEDULE_URL */
   scheduleUrl: string;
-  /** Inline embed URL, e.g. Calendly `?embed_type=Inline` or Cal.com `/embed` path. Optional: PUBLIC_BOOKING_IFRAME_URL */
+  /**
+   * Full Calendly scheduling URL for the inline widget (e.g. https://calendly.com/you/30min).
+   * Optional: PUBLIC_CALENDLY_EVENT_URL in .env
+   */
+  calendlyEventUrl: string | null;
+  /** Generic iframe embed (e.g. Cal.com …/embed). Used only if calendlyEventUrl is empty. Optional: PUBLIC_BOOKING_IFRAME_URL */
   iframeSrc: string | null;
   sticker: string;
   title: string;
@@ -104,7 +109,8 @@ export const resume: Resume = {
     },
   },
   booking: {
-    scheduleUrl: '',
+    scheduleUrl: 'https://calendly.com/ispilledmymilk',
+    calendlyEventUrl: 'https://calendly.com/ispilledmymilk',
     iframeSrc: null,
     sticker: 'COFFEE CHATS · RECRUITING · COLLABS',
     title: 'Book time with me',

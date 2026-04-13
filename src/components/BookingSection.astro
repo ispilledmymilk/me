@@ -10,17 +10,24 @@ const { booking, contactEmail } = Astro.props;
 
 const scheduleUrl =
   (import.meta.env.PUBLIC_BOOKING_SCHEDULE_URL as string | undefined)?.trim() || booking.scheduleUrl;
+
+const calendlyEventUrl =
+  (import.meta.env.PUBLIC_CALENDLY_EVENT_URL as string | undefined)?.trim() ||
+  (booking.calendlyEventUrl?.trim() ?? '');
+
 const iframeSrc =
   (import.meta.env.PUBLIC_BOOKING_IFRAME_URL as string | undefined)?.trim() || booking.iframeSrc || '';
 
-const hasSchedule = Boolean(scheduleUrl);
+const useCalendly = Boolean(calendlyEventUrl);
+const useIframe = Boolean(iframeSrc) && !useCalendly;
+const hasSchedule = Boolean(scheduleUrl || calendlyEventUrl);
 const mailFallback = `mailto:${contactEmail}?subject=${encodeURIComponent('Meeting request')}`;
-const primaryHref = hasSchedule ? scheduleUrl : mailFallback;
+const primaryHref = hasSchedule ? scheduleUrl || calendlyEventUrl : mailFallback;
 ---
 
 <section
   id="meet"
-  class="scroll-mt-24 border-t border-plm-ink/10 bg-gradient-to-b from-plm-pink/40 via-plm-white to-plm-paper py-20"
+  class="plm-section-reveal scroll-mt-24 border-t border-plm-ink/10 bg-gradient-to-b from-plm-pink/40 via-plm-white to-plm-paper py-20"
   aria-labelledby="meet-heading"
 >
   <div class="mx-auto grid max-w-5xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-start">
@@ -37,24 +44,38 @@ const primaryHref = hasSchedule ? scheduleUrl : mailFallback;
       </p>
       <div class="mt-8 flex flex-wrap gap-3">
         <a class="plm-btn-mint" href={primaryHref} rel="noreferrer" target={hasSchedule ? '_blank' : undefined}>
-          {hasSchedule ? 'Book a meeting' : 'Request a time (email)'}
+          {hasSchedule ? 'Open in Calendly' : 'Request a time (email)'}
         </a>
         <a class="plm-btn-outline" href={`mailto:${contactEmail}`}> Email me </a>
       </div>
-      {!hasSchedule && (
-        <p class="mt-4 max-w-sm font-mono text-xs leading-relaxed text-plm-muted">
-          Add your Calendly or Cal.com link in <code class="rounded bg-plm-pink/50 px-1">src/data/resume.ts</code> as
-          <code class="rounded bg-plm-pink/50 px-1">booking.scheduleUrl</code>, or set
-          <code class="rounded bg-plm-pink/50 px-1">PUBLIC_BOOKING_SCHEDULE_URL</code> in <code class="rounded bg-plm-pink/50 px-1">.env</code>.
-        </p>
-      )}
+      {
+        !hasSchedule && (
+          <p class="mt-4 max-w-sm font-mono text-xs leading-relaxed text-plm-muted">
+            Set <code class="rounded bg-plm-pink/50 px-1">booking.calendlyEventUrl</code> and{' '}
+            <code class="rounded bg-plm-pink/50 px-1">booking.scheduleUrl</code> in{' '}
+            <code class="rounded bg-plm-pink/50 px-1">src/data/resume.ts</code>, or{' '}
+            <code class="rounded bg-plm-pink/50 px-1">PUBLIC_CALENDLY_EVENT_URL</code> /{' '}
+            <code class="rounded bg-plm-pink/50 px-1">PUBLIC_BOOKING_SCHEDULE_URL</code> in{' '}
+            <code class="rounded bg-plm-pink/50 px-1">.env</code>.
+          </p>
+        )
+      }
     </div>
 
     <div
       class="overflow-hidden rounded-[1.75rem] border border-plm-ink/10 bg-plm-white shadow-[0_20px_50px_-20px_rgb(45_42_50_/_0.18)]"
     >
       {
-        iframeSrc ? (
+        useCalendly ? (
+          <div class="calendly-root min-h-[680px] w-full p-2 sm:min-h-[720px] sm:p-4">
+            <div
+              class="calendly-inline-widget w-full"
+              data-url={calendlyEventUrl}
+              style="min-width: 280px; height: 700px;"
+            />
+            <script is:inline src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          </div>
+        ) : useIframe ? (
           <iframe
             title="Pick a time to meet"
             src={iframeSrc}
@@ -65,8 +86,8 @@ const primaryHref = hasSchedule ? scheduleUrl : mailFallback;
           <div class="flex min-h-[420px] flex-col items-center justify-center gap-4 bg-gradient-to-br from-plm-sky/30 to-plm-pink/25 p-10 text-center sm:min-h-[480px]">
             <p class="font-serif text-2xl font-medium text-plm-ink">Calendar embed</p>
             <p class="max-w-xs text-sm leading-relaxed text-plm-muted">
-              When you add an embed URL (Calendly inline, Cal.com <code class="text-xs">/embed</code>, etc.), the
-              scheduler will appear here automatically.
+              Add a Calendly URL in <code class="text-xs">booking.calendlyEventUrl</code> or an iframe URL in{' '}
+              <code class="text-xs">booking.iframeSrc</code>.
             </p>
             <a class="plm-btn-pink" href={primaryHref} rel="noreferrer" target={hasSchedule ? '_blank' : undefined}>
               {hasSchedule ? 'Open scheduler' : 'Email to schedule'}

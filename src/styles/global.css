@@ -26,6 +26,46 @@
   }
 }
 
+@keyframes plm-fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes plm-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(6px, -10px, 0) scale(1.03);
+  }
+}
+
+@keyframes plm-heart-soft {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.14);
+  }
+}
+
+@keyframes plm-shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -44,6 +84,29 @@
     background-attachment: fixed;
   }
 
+  @media (prefers-reduced-motion: no-preference) {
+    body {
+      background-image:
+        linear-gradient(
+          120deg,
+          rgb(255 255 255 / 0.97) 0%,
+          rgb(252 228 236 / 0.35) 25%,
+          rgb(255 255 255 / 0.97) 50%,
+          rgb(179 229 252 / 0.28) 75%,
+          rgb(255 255 255 / 0.97) 100%
+        ),
+        linear-gradient(rgb(255 255 255 / 0.88), rgb(255 255 255 / 0.88)),
+        linear-gradient(rgb(45 42 50 / 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgb(45 42 50 / 0.04) 1px, transparent 1px);
+      background-size:
+        200% 200%,
+        auto,
+        24px 24px,
+        24px 24px;
+      animation: plm-shimmer 28s ease infinite;
+    }
+  }
+
   :focus-visible {
     @apply rounded outline-2 outline-offset-2 outline-plm-sky-deep;
   }
@@ -57,19 +120,19 @@
   }
 
   .plm-btn-pink {
-    @apply inline-flex items-center justify-center rounded-full bg-plm-pink-deep px-6 py-3 text-sm font-semibold tracking-wide text-plm-ink shadow-sm transition hover:bg-plm-pink;
+    @apply inline-flex items-center justify-center rounded-full bg-plm-pink-deep px-6 py-3 text-sm font-semibold tracking-wide text-plm-ink shadow-sm transition duration-200 hover:scale-[1.03] hover:bg-plm-pink active:scale-[0.98];
   }
 
   .plm-btn-mint {
-    @apply inline-flex items-center justify-center rounded-full bg-plm-mint px-6 py-3 text-sm font-semibold tracking-wide text-plm-ink shadow-sm transition hover:bg-plm-mint-deep;
+    @apply inline-flex items-center justify-center rounded-full bg-plm-mint px-6 py-3 text-sm font-semibold tracking-wide text-plm-ink shadow-sm transition duration-200 hover:scale-[1.03] hover:bg-plm-mint-deep active:scale-[0.98];
   }
 
   .plm-btn-sky {
-    @apply inline-flex items-center justify-center rounded-full bg-plm-sky px-6 py-3 text-sm font-semibold tracking-wide text-plm-ink shadow-sm transition hover:bg-plm-sky-deep;
+    @apply inline-flex items-center justify-center rounded-full bg-plm-sky px-6 py-3 text-sm font-semibold tracking-wide text-plm-ink shadow-sm transition duration-200 hover:scale-[1.03] hover:bg-plm-sky-deep active:scale-[0.98];
   }
 
   .plm-btn-outline {
-    @apply inline-flex items-center justify-center rounded-full border-2 border-plm-ink/15 bg-plm-white px-6 py-3 text-sm font-semibold tracking-wide text-plm-ink shadow-sm transition hover:border-plm-sky-deep hover:bg-plm-sky/30;
+    @apply inline-flex items-center justify-center rounded-full border-2 border-plm-ink/15 bg-plm-white px-6 py-3 text-sm font-semibold tracking-wide text-plm-ink shadow-sm transition duration-200 hover:scale-[1.03] hover:border-plm-sky-deep hover:bg-plm-sky/30 active:scale-[0.98];
   }
 
   .plm-sticker {
@@ -90,5 +153,90 @@
 
   .plm-card-mint {
     @apply rounded-[1.75rem] border border-plm-ink/10 bg-plm-mint/45 p-6 shadow-[0_12px_40px_-12px_rgb(45_42_50_/_0.12)];
+  }
+
+  .plm-card-pink,
+  .plm-card-sky,
+  .plm-card-mint {
+    @apply transition duration-300 ease-out will-change-transform;
+  }
+
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .plm-card-pink:hover,
+    .plm-card-sky:hover,
+    .plm-card-mint:hover {
+      transform: translateY(-4px) scale(1.01);
+      box-shadow:
+        0 20px 48px -18px rgb(45 42 50 / 0.2),
+        0 0 0 1px rgb(242 54 132 / 0.12);
+    }
+  }
+
+  .plm-brand-heart {
+    display: inline-block;
+    transform-origin: center;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .plm-brand-heart {
+      animation: plm-heart-soft 1.6s ease-in-out infinite;
+    }
+  }
+
+  .plm-hero-blob {
+    @apply pointer-events-none absolute rounded-full opacity-40 blur-2xl;
+    animation: plm-float 9s ease-in-out infinite;
+  }
+
+  .plm-hero-blob:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 11s;
+  }
+
+  .plm-hero-blob:nth-child(3) {
+    animation-delay: -6s;
+    animation-duration: 13s;
+  }
+
+  .plm-stagger-1 {
+    animation: plm-fade-up 0.65s ease both;
+  }
+  .plm-stagger-2 {
+    animation: plm-fade-up 0.7s ease 0.08s both;
+  }
+  .plm-stagger-3 {
+    animation: plm-fade-up 0.75s ease 0.16s both;
+  }
+  .plm-stagger-4 {
+    animation: plm-fade-up 0.8s ease 0.24s both;
+  }
+  .plm-stagger-5 {
+    animation: plm-fade-up 0.85s ease 0.32s both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .plm-stagger-1,
+    .plm-stagger-2,
+    .plm-stagger-3,
+    .plm-stagger-4,
+    .plm-stagger-5,
+    .plm-hero-blob {
+      animation: none !important;
+      opacity: 1 !important;
+    }
+
+    body {
+      animation: none !important;
+    }
+  }
+
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .plm-section-reveal {
+        animation: plm-fade-up 0.75s ease both;
+        animation-timeline: view();
+        animation-range: entry 5% cover 22%;
+      }
+    }
   }
 }
