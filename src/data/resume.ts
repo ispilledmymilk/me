@@ -156,7 +156,7 @@ export const resume: Resume = {
   projects: [
     {
       name: 'RefiMatch',
-      context: 'Ranks refinance scenarios with AI.',
+      context: 'Refinance scenarios ranked with AI',
       dates: 'Apr 2026',
       stackByCategory: [
         { label: 'Languages', items: ['Swift', 'Python'] },
@@ -186,7 +186,8 @@ export const resume: Resume = {
     },
     {
       name: 'OmenAI',
-      context: 'TD Best AI hack to detect financial fraud',
+      context:
+        'Insider-trading energy on prediction markets — TD Best AI hack to detect financial Fraud',
       dates: 'Mar 2026',
       stackByCategory: [
         { label: 'Languages', items: ['Python (scikit-learn)'] },
@@ -201,6 +202,7 @@ export const resume: Resume = {
     },
     {
       name: 'Weathwise',
+      context: 'Money APIs with trust issues—in a good way',
       dates: 'Dec 2025',
       stackByCategory: [
         { label: 'Languages', items: ['Java', 'TypeScript'] },
@@ -217,6 +219,7 @@ export const resume: Resume = {
     },
     {
       name: 'eXplicit',
+      context: 'Compliance docs that answer back',
       dates: 'Jan 2026',
       stackByCategory: [
         { label: 'Languages', items: ['Python'] },
@@ -231,7 +234,7 @@ export const resume: Resume = {
     },
     {
       name: 'Squasher',
-      context: 'CodeDecay QA',
+      context: "Your repo's vibe check",
       dates: 'Jan 2026',
       stackByCategory: [
         { label: 'Languages', items: ['Python', 'TypeScript'] },
@@ -247,6 +250,7 @@ export const resume: Resume = {
     },
     {
       name: 'Saiborg',
+      context: 'Talk, type, search, schedule—one assistant that remembers all',
       dates: 'Nov 2025',
       stackByCategory: [
         { label: 'Languages', items: ['Python', 'JavaScript', 'HTML', 'CSS'] },
@@ -260,6 +264,7 @@ export const resume: Resume = {
     },
     {
       name: 'Smart Mirror — AuraGlass',
+      context: 'Mirror, mirror on the wall',
       dates: 'Oct 2024',
       stackByCategory: [
         { label: 'Languages & scripting', items: ['Bash', 'JavaScript'] },
@@ -275,6 +280,7 @@ export const resume: Resume = {
     },
     {
       name: 'Running Alarm Clock — Alarmy',
+      context: "The snooze button's nemesis",
       dates: 'Sept 2023',
       stackByCategory: [
         { label: 'Languages', items: ['Java'] },
