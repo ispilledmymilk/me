@@ -38,11 +38,17 @@ export interface ExperienceItem {
   bullets: string[];
 }
 
+/** Grouped tech stack for project cards (Languages, Frameworks, etc.). */
+export interface ProjectStackGroup {
+  label: string;
+  items: string[];
+}
+
 export interface ProjectItem {
   name: string;
   context?: string;
   dates: string;
-  stack: string[];
+  stackByCategory: ProjectStackGroup[];
   bullets: string[];
 }
 
@@ -118,10 +124,10 @@ export const resume: Resume = {
       location: 'Toronto, Canada',
       dates: 'Jan 2026 – Apr 2026',
       bullets: [
-        'Built end-to-end automation infrastructure using Playwright and Postman across JS and GoLang codebases, reducing manual testing overhead by 60% and accelerating release cycles across all active product teams (frontend and backend teams).',
-        'Engineered an AI-powered feed compliance bot that answers natural language regulatory queries, auto-generates structured JSON configs from documents, and triggers real-time workflow updates on document changes, eliminating manual tracking.',
-        'Conducted root cause analysis on production failures by reviewing cross-language codebases to identify systemic failure patterns, reducing defect recurrence in high-risk areas and improving overall system reliability by 47%.',
-        'Contributed to full SDLC including sprint planning, effort estimation, and feature prioritization in an Agile environment, collaborating cross-functionally with developers, designers, and product managers to meet delivery timelines.',
+        'Improved release predictability by building end-to-end test automation (Playwright, Postman) across JS and GoLang services, cutting manual QA effort 60% and shortening feedback loops for frontend and backend product teams.',
+        'Shipped an AI-assisted compliance workflow: natural-language answers over policy docs, structured JSON configs generated from source files, and real-time updates on document changes, reducing manual review and clarifying impact for GTM stakeholders.',
+        'Ran structured post-incident reviews on production defects across codebases; prioritized fixes that cut repeat incidents in high-risk areas and lifted reliability 47% (measurable defect trend).',
+        'Partnered in sprint planning, sizing, and feature prioritization with PM, Design, and Engineering, translating goals into shippable increments and keeping delivery dates honest.',
       ],
     },
     {
@@ -130,9 +136,9 @@ export const resume: Resume = {
       location: 'Toronto, Canada',
       dates: 'May 2025 – Aug 2025',
       bullets: [
-        'Architected scalable automated testing infrastructure covering 1000+ test scenarios across REST APIs and frontend services using Playwright and Postman, improving defect detection rates and reducing regression risk prior to each production release.',
-        'Owned frontend development and maintenance of a B2B SaaS platform, independently implementing new user-facing features, resolving UI bugs, and improving UX workflows to enhance usability for clinical and administrative end users.',
-        'Defined and documented 1500+ functional requirements and test cases covering edge cases and failure scenarios, bridging engineering and product teams to align technical execution with business goals and ensure on-time, high-quality feature delivery.',
+        'Defined and documented 1500+ functional requirements and test cases (edge cases, failure modes), single source of truth between Product and Engineering for scope, acceptance, and release readiness.',
+        'Owned B2B SaaS web work end-to-end: shipped clinician/admin-facing improvements, closed UX gaps from support feedback, and validated flows with clinical stakeholders before release.',
+        'Built automated regression coverage (1000+ scenarios, REST + UI, Playwright/Postman) so teams could ship with clearer risk picture and fewer production surprises.',
       ],
     },
     {
@@ -141,20 +147,9 @@ export const resume: Resume = {
       location: 'USA, Remote',
       dates: 'Apr 2024 – Jul 2024',
       bullets: [
-        'Developed a competitive landscape map by conducting extensive data analysis and financial performance assessments of 15+ key players in the health market, leveraging ETL techniques to extract and process large volumes of data into actionable insights.',
-        'Performed comprehensive research using data transformation and reporting techniques to analyze annual growth rate, key segments, and emerging trends, delivering structured reports that directly informed executive-level strategic decisions.',
-        'Identified 10 valuable partners and developed a targeted outreach strategy with personalized messaging frameworks to engage stakeholders in discussions, ensuring alignment with corporate growth goals, market positioning and partnership objectives.',
-      ],
-    },
-    {
-      title: 'IT Support Help',
-      company: 'Indian Language School',
-      location: 'Lagos, Nigeria',
-      dates: 'Apr 2022 – Mar 2023',
-      bullets: [
-        'Provided technical support to 1500+ students, resolving 90 issues weekly related to hardware, software, and network.',
-        'Managed tickets and troubleshot 50+ requests per week, including system errors, printer malfunctions, and access issues.',
-        'Assisted in maintaining 200+ campus devices, performing updates, installations, and security patches to ensure uptime.',
+        'Produced a competitive landscape and financial benchmarking for 15+ health-market players; ETL and analysis pipelines turned raw filings and metrics into exec-ready product and positioning implications.',
+        'Sized market segments and growth trends via reporting and scenario analysis; delivered concise memos that informed go-to-market and strategic bets at leadership level.',
+        'Recommended 10 partnership targets and built a structured outreach narrative (value props, talk tracks) aligned to growth goals, supporting BD conversations from first touch to follow-up.',
       ],
     },
   ],
@@ -163,57 +158,56 @@ export const resume: Resume = {
       name: 'OmenAI',
       context: 'TD Best AI hack to detect financial fraud',
       dates: 'Mar 2026',
-      stack: ['Python (scikit-learn)', 'PostgreSQL', 'Next.js', 'Redis'],
+      stackByCategory: [
+        { label: 'Languages', items: ['Python (scikit-learn)'] },
+        { label: 'Frameworks', items: ['Next.js'] },
+        { label: 'Data & storage', items: ['PostgreSQL', 'Redis'] },
+      ],
       bullets: [
-        'Architected an unsupervised risk pipeline over 600K+ live trades: engineered wallet-level features (velocity, sizing, win-rate drift), tiered rule-based gates, and scikit-learn Isolation Forest scoring with LLM-generated narrative explanations for analyst-grade triage.',
-        'Shipped a Next.js real-time operations dashboard on PostgreSQL and Redis-backed streams—sub-second refresh on ingested trades, on-chain context panels, radar and distribution views, and drill-down wallet forensics without curated labels.',
-        'Treated insider-trading detection as a cold-start learning problem: calibrated anomaly thresholds per market segment, surfaced model uncertainty in the UI, and demoed end-to-end at TD Best AI (GenAI Genesis 2026).',
+        'Framed insider-risk as an analyst-facing product problem on prediction markets; scoped an MVP around unlabeled trade streams and tiered risk signals (rules + Isolation Forest) with narrative explanations for triage.',
+        'Prioritized 600K+ live trades into wallet-level features (velocity, sizing, win-rate drift) and segment-specific thresholds, balancing false positives vs. investigation load for demo users.',
+        'Shipped a live operations dashboard (streaming feeds, on-chain context, radar views, wallet drill-down) for TD Best AI / GenAI Genesis 2026 (Gold sponsor winner).',
       ],
     },
     {
       name: 'Weathwise',
       dates: 'Dec 2025',
-      stack: [
-        'Java',
-        'Spring Boot',
-        'Angular',
-        'TypeScript',
-        'PostgreSQL',
-        'MongoDB',
-        'Docker',
-        'JWT',
-        'Postman',
+      stackByCategory: [
+        { label: 'Languages', items: ['Java', 'TypeScript'] },
+        { label: 'Frameworks', items: ['Spring Boot', 'Angular'] },
+        { label: 'Data & storage', items: ['PostgreSQL', 'MongoDB'] },
+        { label: 'Security', items: ['JWT'] },
+        { label: 'Testing & infrastructure', items: ['Postman', 'Docker'] },
       ],
       bullets: [
-        'Designed a stateless Spring Boot service behind JWT bearer auth with strict row-level user scoping on every financial mutation, versioned relational schema migrations, and twelve-factor config for repeatable Docker Compose deploys.',
-        'Split OLTP vs. analytical paths across PostgreSQL and MongoDB: synchronous REST contracts for balances and transfers, document-backed rollups for aggregates, and fault-isolated batch slices so one bad account cannot poison a global job.',
-        'Hardened the edge: reverse-proxied Angular SPA, container health gates before traffic, Postman collections plus automated regression over auth flows and aggregation endpoints—documentation kept in lockstep with the OpenAPI contract.',
+        'Defined security and data-isolation requirements for a personal-finance style workflow (JWT, per-user row scoping, schema versioning), translated into API contracts the web client could ship against.',
+        'Scoped OLTP vs. analytics paths (PostgreSQL vs. MongoDB) and failure-isolated batch slices so one bad account could not block aggregate jobs, with explicit tradeoffs for reliability vs. cost.',
+        'Delivered a containerized MVP (Docker Compose, health checks, reverse-proxied SPA) with documented APIs and automated tests on auth and aggregation, repeatable path from local to demo.',
       ],
     },
     {
       name: 'eXplicit',
       dates: 'Jan 2026',
-      stack: ['Python', 'Google Drive API', 'OpenAI', 'JSON', 'Workflow automation'],
+      stackByCategory: [
+        { label: 'Languages', items: ['Python'] },
+        { label: 'APIs & integrations', items: ['Google Drive API', 'OpenAI'] },
+        { label: 'Data & automation', items: ['JSON', 'Workflow automation'] },
+      ],
       bullets: [
-        'Built a retrieval-grounded compliance copilot over Google Drive corpora: natural-language Q&A with citations back to source clauses, backed by OpenAI structured outputs and a versioned JSON schema for downstream feed validators.',
-        'Automated the document→config loop: ingestion, normalization, and deterministic JSON artifact generation per jurisdiction or feed profile, replacing spreadsheet-driven handoffs with auditable, diffable configuration artifacts.',
-        'Implemented change propagation on Drive revisions—idempotent regeneration jobs, conflict-safe merges when multiple editors touch policy docs, and guardrails so stale configs never ship to production workflows.',
+        'Reduced manual policy review by shipping natural-language Q&A over real-estate feed rules with answers grounded in source docs, clear user value for ops and compliance reviewers.',
+        'Owned the document-to-config pipeline: ingestion from Google Drive, structured JSON artifacts per jurisdiction/profile, and removal of spreadsheet handoffs that caused versioning errors.',
+        'Implemented change notifications on Drive edits to regenerate configs, keeping downstream validators aligned with the latest policy without silent drift.',
       ],
     },
     {
       name: 'Squasher',
       context: 'CodeDecay QA',
       dates: 'Jan 2026',
-      stack: [
-        'Python',
-        'FastAPI',
-        'TypeScript',
-        'VS Code API',
-        'LangGraph',
-        'ChromaDB',
-        'SQLite',
-        'Docker',
-        'pytest',
+      stackByCategory: [
+        { label: 'Languages', items: ['Python', 'TypeScript'] },
+        { label: 'Frameworks & platforms', items: ['FastAPI', 'LangGraph', 'VS Code API'] },
+        { label: 'Data & storage', items: ['ChromaDB', 'SQLite'] },
+        { label: 'DevOps & quality', items: ['Docker', 'pytest'] },
       ],
       bullets: [
         'Shipped a split client–server quality platform: FastAPI service exposing file-, repo-, and pre-commit-oriented analysis endpoints, paired with a TypeScript VS Code extension that surfaces risk dashboards and one-click re-runs from the editor.',
@@ -224,7 +218,10 @@ export const resume: Resume = {
     {
       name: 'Saiborg',
       dates: 'Nov 2025',
-      stack: ['Python', 'FastAPI', 'Electron', 'JavaScript', 'HTML', 'CSS', 'Uvicorn'],
+      stackByCategory: [
+        { label: 'Languages', items: ['Python', 'JavaScript', 'HTML', 'CSS'] },
+        { label: 'Frameworks & runtime', items: ['FastAPI', 'Electron', 'Uvicorn'] },
+      ],
       bullets: [
         'Implemented a FastAPI-centered assistant shell with a browser SPA: Web Speech–driven voice capture, typed chat transcripts, and a search plane that prefers Google Programmable Search (with DDG-style fallback) then optionally routes hits through Claude or Gemini for grounded, link-preserving summaries.',
         'Integrated Google Calendar end-to-end—OAuth desktop flow, token refresh, and CRUD helpers for upcoming events and quick-add flows—plus an Electron wrapper that supervises uvicorn, exposes a frameless desktop shell, and deep-links file pickers where needed.',
@@ -234,7 +231,12 @@ export const resume: Resume = {
     {
       name: 'Smart Mirror — AuraGlass',
       dates: 'Oct 2024',
-      stack: ['Bash', 'JavaScript', 'GitLab', 'OpenAI', 'API', 'Raspberry Pi 4'],
+      stackByCategory: [
+        { label: 'Languages & scripting', items: ['Bash', 'JavaScript'] },
+        { label: 'Hardware', items: ['Raspberry Pi 4'] },
+        { label: 'APIs & integrations', items: ['OpenAI'] },
+        { label: 'DevOps', items: ['GitLab CI'] },
+      ],
       bullets: [
         'Led firmware-adjacent productization on Raspberry Pi 4: modular JavaScript services behind a Bash-orchestrated boot path, integrating Google Calendar, Spotify, and OpenAI-powered glanceable cards with GitLab CI for repeatable builds.',
         'Owned module architecture and integration testing across seven mirror surfaces—latency-budgeted UI loops, API quota handling, and graceful degradation when third-party endpoints throttle or fail.',
@@ -244,7 +246,11 @@ export const resume: Resume = {
     {
       name: 'Running Alarm Clock — Alarmy',
       dates: 'Sept 2023',
-      stack: ['Java', 'Arduino', 'Git'],
+      stackByCategory: [
+        { label: 'Languages', items: ['Java'] },
+        { label: 'Embedded', items: ['Arduino'] },
+        { label: 'Tooling', items: ['Git'] },
+      ],
       bullets: [
         'Engineered a Java-hosted verification harness around an Arduino “runaway” alarm firmware: serial protocol tracing, timed actuator assertions, and Git-tracked fixtures so hardware regressions were reproducible on the bench.',
         'Authored 20+ automated and semi-automated cases spanning wake windows, snooze edge cases, power-loss recovery, and motor-drive fault injection—tightening loop latency until the clock hit an 80% measured pass rate on the full matrix.',
@@ -255,12 +261,27 @@ export const resume: Resume = {
   education: [
     {
       school: 'University of Waterloo',
-      credential: 'Bachelors of Computer Science - 2B',
+      credential: 'Bachelor of Computer Science - 2B',
       location: 'Waterloo, Canada',
       dates: 'Sept 2024 – Present',
     },
   ],
   skills: [
+    {
+      label: 'Product & collaboration',
+      items: [
+        'Agile',
+        'JIRA',
+        'Figma',
+        'Excel',
+        'Tableau',
+        'Power BI',
+        'Requirements & acceptance criteria',
+        'User stories',
+        'SDLC',
+        'Cross-functional delivery',
+      ],
+    },
     {
       label: 'Languages & runtimes',
       items: ['Python', 'Java', 'C++', 'GoLang', 'JavaScript', 'TypeScript'],
@@ -272,10 +293,6 @@ export const resume: Resume = {
     {
       label: 'Web & APIs',
       items: ['Spring Boot', 'Angular', 'REST APIs', 'JWT'],
-    },
-    {
-      label: 'This portfolio',
-      items: ['Astro', 'Tailwind CSS', 'Vite', 'Node.js'],
     },
     {
       label: 'Datastores',
@@ -302,7 +319,7 @@ export const resume: Resume = {
     },
     {
       label: 'Quality & tools',
-      items: ['Postman', 'Playwright', 'Raspberry Pi', 'Agile', 'JIRA', 'Excel', 'Figma', 'Tableau', 'Power BI', 'DocketQA'],
+      items: ['Postman', 'Playwright', 'Raspberry Pi', 'DocketQA'],
     },
   ],
   extracurriculars: [
@@ -312,9 +329,9 @@ export const resume: Resume = {
       location: 'Waterloo, Canada',
       dates: 'Sept 2025 – Dec 2025',
       bullets: [
-        'Lead end-to-end event planning and execution for campus organization events, managing logistics from ideation to follow-up.',
-        'Coordinate promotional campaigns with the marketing team to increase event attendance and engagement.',
-        'Organize teams, delegate tasks effectively, and lead setup and teardown for small- and large-scale events.',
+        'Led end-to-end event planning and execution for UW PMC, from ideation and run-of-show through follow-up, balancing sponsor needs, venue constraints, and attendee experience.',
+        'Partnered with marketing on campaigns that lifted attendance and engagement; aligned messaging with club leadership goals.',
+        'Delegated setup/teardown and volunteer roles for small- and large-scale events; de-risked day-of logistics with contingency checklists.',
       ],
     },
     {
@@ -326,16 +343,6 @@ export const resume: Resume = {
         'Managed event-day operations, including check-in, food stations, supply distribution, wayfinding, and attendee support.',
         'Promoted campus events and programs through social media campaigns and word-of-mouth outreach.',
         'Organized social activities to engage the Velocity community and strengthen campus connections.',
-      ],
-    },
-    {
-      title: 'Engineering and Campus Ambassador',
-      org: 'University of Waterloo',
-      location: 'Waterloo, Canada',
-      dates: 'Sept 2024 – Present',
-      bullets: [
-        'Represented campus programs and helped attract prospective students to engineering and campus housing.',
-        'Guided 50+ students during tours, answering questions about engineering life, schedules, and housing.',
       ],
     },
   ],

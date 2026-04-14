@@ -1,0 +1,184 @@
+% Product Management internship resume (one-page target).
+% Build: pdflatex resume-pm.tex
+% Uses the same layout macros as resume.tex with tighter spacing.
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{8pt}
+
+\addtolength{\oddsidemargin}{-0.75in}
+\addtolength{\evensidemargin}{-0.75in}
+\addtolength{\textwidth}{1.50in}
+\addtolength{\topmargin}{-.75in}
+\addtolength{\textheight}{1.45in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\linespread{0.90}
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small#4} \\[-2pt]
+    \end{tabular*}\vspace{-2pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabularx}{\textwidth}{@{}Xr@{}}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabularx}\vspace{-5pt}
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.14in, topsep=0pt, itemsep=0pt, parsep=0pt, partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+\begin{document}
+
+\vspace{-18pt}
+\begin{center}
+    {\Huge \scshape Sai Pranavi Kasturi} \\
+    \small +1-437-388-2829 | \underline{pkasturi@uwaterloo.ca} | \href{https://linkedin.com/in/sai-pranavi-kasturi-704807298}{\underline{linkedin.com/in/sai-pranavi-kasturi-704807298}} | \href{https://github.com/ispilledmymilk}{\underline{github.com/ispilledmymilk}}
+\end{center}
+
+\vspace{-6pt}
+\section{Profile}
+\begin{itemize}[leftmargin=0.05in, label={}]
+  \small\item{Waterloo CS (2B), targeting a \textbf{Product Management internship}. Ships ambiguous problems into scoped releases: requirements/acceptance, B2B SaaS UX, market research, Agile with PM/Design/Eng. Technical enough to read APIs/logs and drive tradeoff conversations.}
+\end{itemize}
+\vspace{-8pt}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Waterloo}{Sept 2024 -- Present}
+      {Bachelor of Computer Science - 2B}{Waterloo, Canada}
+  \resumeSubHeadingListEnd
+
+\section{Skills}
+\begin{itemize}[leftmargin=0.05in, label={}]
+  \small\item{\textbf{Product:} Agile, JIRA, Figma, Excel, Tableau, Power BI, requirements, user stories, stakeholder comms, SDLC.}
+  \small\item{\textbf{Technical:} SQL, Python (Pandas, NumPy, viz), REST, Git, Docker, CI/CD, Postman, Playwright, TS/JS, Java, GoLang, Spring Boot, Angular, PostgreSQL, MongoDB, AWS, Azure.}
+\end{itemize}
+\vspace{-8pt}
+
+\section{Experience}
+    \resumeSubHeadingListStart
+    \resumeSubheading
+        {Automation Developer $|$ Zoocasa $|$ Toronto, Canada}{Jan 2026 - Apr 2026}
+      {}{}
+          \resumeItemListStart
+            \resumeItem{End-to-end \textbf{test automation} (Playwright, Postman) on JS/GoLang services---\textbf{60\%} less manual QA, faster loops for frontend/backend \textbf{product teams}.}
+            \resumeItem{\textbf{AI-assisted compliance workflow:} NL answers on policy docs, structured \textbf{JSON configs} from files, real-time updates---less manual review, clearer impact for \textbf{GTM}.}
+            \resumeItem{\textbf{Post-incident reviews} and prioritized fixes (\textbf{47\%} reliability lift on defect trend); \textbf{sprint planning}, sizing, and prioritization with PM, Design, and Engineering.}
+          \resumeItemListEnd
+      \resumeSubheading
+        {QA Specialist $|$ DocTalk $|$ Toronto, Canada}{May 2025 - Aug 2025}
+      {}{}
+          \resumeItemListStart
+            \resumeItem{\textbf{1500+} requirements and test cases (edge/failure modes)---\textbf{single source of truth} for Product vs.\ Engineering on scope and acceptance.}
+            \resumeItem{\textbf{B2B SaaS} web: clinician/admin improvements, \textbf{UX} fixes from support feedback, stakeholder validation pre-release.}
+            \resumeItem{\textbf{1000+} automated scenarios (REST + UI, Playwright/Postman) for clearer release risk.}
+          \resumeItemListEnd
+    \resumeSubheading
+        {Market Analyst Consultant $|$ Happy Sneeze $|$ USA, Remote}{Apr 2024 - Jul 2024}
+        {}{}
+          \resumeItemListStart
+            \resumeItem{\textbf{Competitive landscape} + financial benchmarking (\textbf{15+} players); ETL and analysis to \textbf{exec-ready} positioning and \textbf{GTM}/strategy memos.}
+            \resumeItem{\textbf{10} partnership targets; \textbf{outreach} narrative (value props, talk tracks) for BD from first touch to follow-up.}
+          \resumeItemListEnd
+   \resumeSubHeadingListEnd
+
+\vspace{-6pt}
+\section{Projects}
+    \resumeSubHeadingListStart
+    \resumeProjectHeading
+          {\textbf{OmenAI} \textbar\ \textbf{TD Best AI hack} $|$ \emph{Python (sklearn), PostgreSQL, Next.js, Redis}}{Mar 2026}
+    \resumeItemListStart
+    \resumeItem{Framed \textbf{insider-risk} for prediction markets; MVP on \textbf{unlabeled} streams, rules + \textbf{Isolation Forest}, narrative explanations for triage.}
+    \resumeItem{\textbf{600K+} trades $\rightarrow$ wallet features and thresholds; \textbf{live ops dashboard}. \textbf{Gold sponsor}, GenAI Genesis 2026.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Weathwise} $|$ \emph{Java, Spring Boot, Angular, TS, PostgreSQL, MongoDB, Docker, JWT}}{Dec 2025}
+          \resumeItemListStart
+            \resumeItem{\textbf{Security/isolation} requirements (JWT, row scoping, schema versioning) $\rightarrow$ \textbf{API contracts}; \textbf{OLTP vs.\ analytics} split with failure-isolated batch slices.}
+            \resumeItem{\textbf{Containerized} MVP (Compose, health checks, proxied SPA), documented APIs + tests on auth/aggregation.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+{\textbf{eXplicit} $|$ \emph{Python, Google Drive API, OpenAI, JSON, automation}}{Jan 2026}
+\resumeItemListStart
+    \resumeItem{\textbf{NL Q\&A} on real-estate feed rules (grounded in source docs); \textbf{document $\rightarrow$ JSON config} pipeline replacing spreadsheet handoffs.}
+    \resumeItem{\textbf{Drive change notifications} $\rightarrow$ config regeneration; validators stay on \textbf{latest policy}.}
+\resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\vspace{-4pt}
+\section{Extracurriculars}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Events Director $|$ UW Product Management Club $|$ Waterloo, Canada}{Sept 2025 - Dec 2025}
+      {}{}
+      \resumeItemListStart
+        \resumeItem{Led E2E \textbf{events} (ideation $\rightarrow$ follow-up); balanced sponsors, venue, and attendee experience.}
+        \resumeItem{\textbf{Marketing} campaigns for attendance; delegated setup/teardown with contingency checklists.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Campus Ambassador $|$ Velocity $|$ Waterloo, Canada}{Sept 2025 - Dec 2025}
+      {}{}
+      \resumeItemListStart
+        \resumeItem{Event-day ops: check-in, logistics, wayfinding, attendee support.}
+        \resumeItem{Promoted campus programs via \textbf{social} campaigns and community activities.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\vspace{-6pt}
+\section{Certifications and Awards}
+    \resumeSubHeadingListStart
+      \item[]
+          \resumeItemListStart
+            \resumeItem{AWS Beginners; LinkedIn \textbf{Data Analysis}; Postman API. \textbf{Gold sponsor TD Best AI Hack} (fraud detection), GenAI Genesis 2026.}
+          \resumeItemListEnd
+   \resumeSubHeadingListEnd
+
+\end{document}
