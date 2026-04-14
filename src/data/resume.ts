@@ -155,6 +155,37 @@ export const resume: Resume = {
   ],
   projects: [
     {
+      name: 'RefiMatch',
+      context:
+        'iOS + cloud backend for refinance scenario comparison—deterministic Pandas/NumPy scoring with LLM-grounded explanations (LangGraph + RAG + optional Langfuse), Kubernetes deploys, MCP tools, and CI quality gates.',
+      dates: 'Apr 2026',
+      stackByCategory: [
+        { label: 'Languages', items: ['Swift', 'Python'] },
+        { label: 'iOS & client', items: ['SwiftUI', 'iOS', 'Swift Package Manager'] },
+        { label: 'Backend & APIs', items: ['FastAPI', 'Pydantic', 'REST APIs'] },
+        {
+          label: 'Data & ML',
+          items: ['Pandas', 'NumPy', 'LangGraph', 'LangChain', 'LLM', 'RAG', 'pgvector', 'PostgreSQL'],
+        },
+        {
+          label: 'Platform & delivery',
+          items: ['Docker', 'Kubernetes', 'Kustomize', 'GitHub Actions', 'CI/CD', 'Redis'],
+        },
+        {
+          label: 'Quality & observability',
+          items: ['pytest', 'Ruff', 'observability', 'Langfuse', 'MCP', 'Promptfoo', 'DeepEval'],
+        },
+      ],
+      bullets: [
+        'Architected a monorepo delivering a SwiftUI iOS 17 client and a FastAPI backend that compares curated refinance offers using a Pandas/NumPy amortization and ranking engine, keeping numeric truth separate from model prose.',
+        'Implemented a LangGraph-based explanation flow with RAG retrieval over bundled knowledge and optional pgvector storage, plus Langfuse-compatible tracing hooks for production observability.',
+        'Exposed lender catalog and scoring operations through an MCP (Model Context Protocol) stdio server for reusable tool access from AI hosts and demos.',
+        'Shipped Kubernetes-first deployment artifacts (Postgres/pgvector, Redis, Job-based ingestion, API Deployment/Service) and GitHub Actions CI with Ruff, pytest, Promptfoo, and DeepEval hooks.',
+        'Built REST contracts with Pydantic v2 validation, JSON schema for compare payloads, and a Docker image bundling API, agent, and RAG ingest for repeatable environments.',
+        'Monorepo layout: separate scoring library, agent package, API service, RAG ingest, MCP server, K8s manifests, and eval harness—~80 automated pytest cases (scoring + agent graph + optional DeepEval), 6 Swift source files in the iOS app target.',
+      ],
+    },
+    {
       name: 'OmenAI',
       context: 'TD Best AI hack to detect financial fraud',
       dates: 'Mar 2026',
@@ -280,15 +311,32 @@ export const resume: Resume = {
         'User stories',
         'SDLC',
         'Cross-functional delivery',
+        'Financial modeling',
+        'Mortgage / refinance analytics',
+        'Decision-support systems',
       ],
     },
     {
       label: 'Languages & runtimes',
-      items: ['Python', 'Java', 'C++', 'GoLang', 'JavaScript', 'TypeScript', 'Node.js'],
+      items: ['Python', 'Java', 'C++', 'GoLang', 'JavaScript', 'TypeScript', 'Node.js', 'Swift'],
+    },
+    {
+      label: 'Mobile',
+      items: ['SwiftUI', 'iOS', 'Swift Package Manager'],
     },
     {
       label: 'Python & data',
-      items: ['Pandas', 'NumPy', 'Matplotlib', 'SciPy', 'PyTorch', 'scikit-learn', 'ETL', 'Isolation Forest'],
+      items: [
+        'Pandas',
+        'NumPy',
+        'Matplotlib',
+        'SciPy',
+        'PyTorch',
+        'scikit-learn',
+        'ETL',
+        'Isolation Forest',
+        'LangChain',
+      ],
     },
     {
       label: 'Web & APIs',
@@ -307,11 +355,12 @@ export const resume: Resume = {
         'OpenAPI',
         'WebSockets',
         'OAuth 2.0',
+        'Pydantic',
       ],
     },
     {
       label: 'Datastores',
-      items: ['PostgreSQL', 'MongoDB', 'SQL', 'Supabase', 'Redis', 'SQLite', 'ChromaDB'],
+      items: ['PostgreSQL', 'MongoDB', 'SQL', 'Supabase', 'Redis', 'SQLite', 'ChromaDB', 'pgvector'],
     },
     {
       label: 'AI & integrations',
@@ -324,6 +373,12 @@ export const resume: Resume = {
         'Web Speech API',
         'Programmable Search API',
         'LangGraph',
+        'LLM',
+        'RAG',
+        'Langfuse',
+        'MCP',
+        'Promptfoo',
+        'DeepEval',
       ],
     },
     {
@@ -335,6 +390,11 @@ export const resume: Resume = {
         'Docker',
         'Vercel',
         'CI/CD',
+        'GitHub Actions',
+        'Kubernetes',
+        'Kustomize',
+        'Monorepo',
+        'observability',
         'DevOps',
         'Linux',
         'Bash',
@@ -350,7 +410,7 @@ export const resume: Resume = {
     },
     {
       label: 'Quality & tools',
-      items: ['Postman', 'Playwright', 'pytest', 'VS Code API', 'Radon', 'Arduino', 'Raspberry Pi', 'DocketQA'],
+      items: ['Postman', 'Playwright', 'pytest', 'Ruff', 'VS Code API', 'Radon', 'Arduino', 'Raspberry Pi', 'DocketQA'],
     },
   ],
   extracurriculars: [
