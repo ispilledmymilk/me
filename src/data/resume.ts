@@ -156,8 +156,7 @@ export const resume: Resume = {
   projects: [
     {
       name: 'RefiMatch',
-      context:
-        'iOS + cloud backend for refinance scenario comparison—deterministic Pandas/NumPy scoring with LLM-grounded explanations (LangGraph + RAG + optional Langfuse), Kubernetes deploys, MCP tools, and CI quality gates.',
+      context: 'Ranks refinance scenarios with AI.',
       dates: 'Apr 2026',
       stackByCategory: [
         { label: 'Languages', items: ['Swift', 'Python'] },
