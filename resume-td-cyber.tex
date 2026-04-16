@@ -1,0 +1,270 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+% \input{glyphtounicode}  % Commented out - file not found
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{8pt}
+\setlength{\footskip}{8pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.75in}
+\addtolength{\evensidemargin}{-0.75in}
+\addtolength{\textwidth}{1.50in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% Slightly tighter lines to help keep the resume to one page
+\linespread{0.93}
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-3pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\[-2pt]
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-6pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+%----------HEADING----------
+
+\vspace{-28pt}
+\begin{center}
+    {\Huge \scshape Sai Pranavi Kasturi} \\ 
+    
+    \small +1-437-388-2829 | \underline{pkasturi@uwaterloo.ca} | \href{https://linkedin.com/in/sai-pranavi-kasturi-704807298}{\underline{linkedin.com/in/sai-pranavi-kasturi}} | \href{https://github.com/ispilledmymilk}{\underline{github.com/ispilledmymilk}} | \href{https://ispilledmymilk.github.io/me/}{\underline{ispilledmymilk.github.io/me}}
+    \vspace{-10pt}
+\end{center}
+
+\vspace{-10pt}
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Waterloo}{Sept 2024 -- Present}
+      {Bachelor of Computer Science - 2B}{Waterloo, Canada}
+  \resumeSubHeadingListEnd
+\vspace{-8pt}
+
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.05in, label={}]
+  \small\item{
+    Application Security, Security Architecture, Risk Assessment \& Reporting, Fraud Detection \& Prevention, Anomaly Detection, Incident Response, Data Loss Prevention, Governance \& Compliance, Defense in Depth, Python, Java, SQL, JavaScript, TypeScript, GoLang, JWT, OAuth 2.0, REST APIs, PostgreSQL, MongoDB, Redis, Git, JIRA, Confluence, CI/CD, GitHub Actions, Docker, Kubernetes, AWS, Azure, Linux, Bash, pytest, Playwright, Postman, Isolation Forest, LLM, RAG, LangChain, OpenAI API, Agile, SDLC
+  }
+\end{itemize}
+\vspace{-18pt}
+
+%-----------EXPERIENCE-----------
+\vspace{1.20pt}
+\section{Experience}
+
+    \resumeSubHeadingListStart
+     \vspace{-2pt} 
+    \resumeSubheading
+        {Automation Developer $|$ Zoocasa $|$ Toronto, Canada}{Jan 2026 - Apr 2026} 
+      {}{}
+      \vspace{-14pt} 
+          \resumeItemListStart
+            \resumeItem{Engineered an AI-powered \textbf{compliance and governance} tool that answers natural-language regulatory queries and \textbf{auto-generates structured security configurations}---\textbf{identified and assessed technology risks} in compliance document drift, enforcing \textbf{security controls} and \textbf{minimizing business impact} of policy violations.}
+            \vspace{-2pt}
+            \resumeItem{Built automated \textbf{security testing} pipelines across JS and GoLang codebases, implementing \textbf{defense-in-depth} test coverage---\textbf{reduced recurring security defects by 47\%} and \textbf{minimized business impact} of incidents through \textbf{root-cause analysis and resolution} of production vulnerabilities.}
+            \vspace{-2pt}
+            \resumeItem{Performed \textbf{ongoing analysis and evaluation} of production \textbf{security incidents} and \textbf{infrastructure anomalies}; \textbf{reported on technology risks} to \textbf{business leaders} with \textbf{structured risk reports}---\textbf{reduced recurring incidents by 47\%}. Applied \textbf{SDLC} and \textbf{Agile} practices (\textbf{JIRA}) to manage deliverables.}
+          \resumeItemListEnd
+          \vspace{-6pt} 
+      \resumeSubheading
+        {QA Specialist $|$ DocTalk $|$ Toronto, Canada}{May 2025 - Aug 2025}
+      {}{}
+      \vspace{-14pt}   
+          \resumeItemListStart
+            \resumeItem{Architected \textbf{application security} testing infrastructure covering \textbf{1000+ security scenarios} across \textbf{REST APIs} and services; \textbf{evaluated and tested detective cyber security controls}, \textbf{continuously improving} \textbf{data loss prevention} and \textbf{application security} capabilities before each production release.}
+            \vspace{-2pt} 
+            \resumeItem{Defined \textbf{1500+ security and business requirements} covering \textbf{threat vectors}, failure modes, and edge cases; produced \textbf{test plans} and \textbf{traceability matrices} for \textbf{compliance} sign-off---serving as the single source of truth for \textbf{security risk} acceptance and release readiness.}
+            \vspace{-2pt}   
+            \resumeItem{Performed \textbf{incident response} activities on defects in a \textbf{B2B SaaS} platform; \textbf{identified, assessed, and reported on technology risks} across \textbf{user segments}, synthesizing \textbf{risk findings} into \textbf{actionable recommendations} and \textbf{communicating results} to \textbf{stakeholders}.}
+          \resumeItemListEnd
+          \vspace{-4pt}
+    \resumeSubheading
+        {Market Analyst Consultant $|$ Happy Sneeze $|$ USA, Remote}{Apr 2024 - Jul 2024}
+        {}{}
+      \vspace{-14pt}   
+          \resumeItemListStart
+            \resumeItem{\textbf{Identified, assessed, measured and reported on technology risks} across \textbf{15+} financial data sources; conducted \textbf{vendor risk evaluation}, benchmarked \textbf{security posture} and \textbf{compliance} practices, generating \textbf{structured risk reports} for \textbf{leadership} to \textbf{inform risk appetite} decisions.}
+            \vspace{-2pt}        
+            \resumeItem{Built \textbf{automated analytics pipelines} in \textbf{Python} and \textbf{SQL} tracking \textbf{security and performance metrics}; delivered \textbf{non-standard risk reporting} and \textbf{governance} documentation suitable for \textbf{executive consumption} under tight deadlines.}
+             \vspace{-2pt}        
+            \resumeItem{Built \textbf{robust processes} and \textbf{documentation} cross-referencing \textbf{10+} data sources; \textbf{educated business partners} on \textbf{risk management} controls and \textbf{governance activities}---synthesizing complex \textbf{compliance} information into \textbf{digestible summaries} to \textbf{drive} security-aware \textbf{decision making}.}
+            \vspace{-2pt}        
+          \resumeItemListEnd
+                
+   \resumeSubHeadingListEnd 
+
+%-----------PROJECTS-----------
+\vspace{-16pt}
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+          {\textbf{OmenAI} \textbar\ \textbf{TD Best AI Hack --- Gold Sponsor Winner} $|$ \emph{\textbf{Python, scikit-learn, SQL, PostgreSQL, Next.js, Redis}}}{Mar 2026}
+    \resumeItemListStart
+    \resumeItem{Built a real-time \textbf{fraud detection and prevention} platform ingesting \textbf{600K+ transactions}, applying \textbf{Isolation Forest} anomaly detection and \textbf{rule-based risk scoring}---delivered \textbf{fraud detection controls} that flagged \textbf{top 2\%} as high-risk with \textbf{zero labeled ground-truth}, \textbf{protecting} against financial fraud at scale.}
+    \vspace{-2pt}
+    \resumeItem{\textbf{Identified, assessed, and reported on technology risk} across \textbf{12+ signal dimensions}; built \textbf{analytic outputs} with \textbf{operational dashboards} and \textbf{governance} reporting for \textbf{TD} judges---won \textbf{Gold Sponsor} at \textbf{GenAI Genesis 2026}, demonstrating \textbf{fraud technology} and \textbf{risk management} capabilities.}
+          \resumeItemListEnd 
+          \vspace{-18pt}
+
+      \resumeProjectHeading
+          {\textbf{Weathwise} $|$ \emph{\textbf{Java, Spring Boot, Angular, TypeScript, PostgreSQL, MongoDB, Docker, JWT}}}{Dec 2025}
+          \resumeItemListStart
+            \resumeItem{Implemented \textbf{security architecture} with \textbf{JWT}-based authentication, per-user \textbf{data isolation}, and schema versioning---adhering to \textbf{standard security coding practices} to \textbf{keep applications secure} and prevent \textbf{data loss}; enforced \textbf{application security} controls across all \textbf{REST API} endpoints.}
+            \vspace{-2pt}
+            \resumeItem{Designed \textbf{defense-in-depth} multi-database architecture with \textbf{failure-isolated} batch processing achieving \textbf{95\%+} success rate; \textbf{evaluated detective security controls} through \textbf{automated testing}---\textbf{zero data integrity violations} and \textbf{zero unauthorized access} incidents in production.}
+          \resumeItemListEnd
+          \vspace{-18pt}
+
+      \resumeProjectHeading
+          {\textbf{Squasher} $|$ \emph{\textbf{Python, TypeScript, FastAPI, LangGraph, ChromaDB, Docker, pytest}}}{Jan 2026}
+          \resumeItemListStart
+            \resumeItem{Built a \textbf{cyber security} code risk assessment platform: \textbf{evaluated detective controls} by scanning codebases for \textbf{vulnerabilities} and anti-patterns using static analysis, git-blame velocity, and \textbf{ChromaDB} vector retrieval---generating a \textbf{0--100 risk score} with \textbf{severity bands} and \textbf{remediation} guidance for \textbf{application security}.}
+            \vspace{-2pt}
+            \resumeItem{\textbf{Tested and improved new capabilities} within existing \textbf{security tooling}: deployed \textbf{FastAPI} backend with \textbf{auth}, health probes, and \textbf{real-time} WebSocket alerts; integrated \textbf{VS Code} extension surfacing \textbf{security risk dashboards}---\textbf{continuously improving} \textbf{defense} capabilities.}
+          \resumeItemListEnd
+          \vspace{-8pt}
+          
+    \resumeSubHeadingListEnd
+\vspace{-6pt}
+
+%-----------INVOLVEMENT---------------
+\section{Extracurriculars}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Events Director $|$ UW Product Management Club $|$ Waterloo, Canada}{Sept 2025 - Dec 2025}
+      {}{}
+      \vspace{-13pt}
+      \resumeItemListStart
+      \vspace{-2pt}
+        \resumeItem{Led E2E \textbf{project planning and execution} under \textbf{compliance} requirements and budget constraints; \textbf{established relationships} across \textbf{stakeholders} and \textbf{managed workload} to \textbf{deliver quality results} on \textbf{tight timelines} in a \textbf{fast-paced environment}.}
+        \vspace{-2pt}
+        \resumeItem{\textbf{Remained informed of emerging issues} and \textbf{industry trends} in technology; \textbf{independently delivered} assigned initiatives with \textbf{high attention to detail} and \textbf{supported governance} activities across the team.}
+      \resumeItemListEnd
+      \vspace{-5pt}
+    \resumeSubheading
+      {Campus Ambassador $|$ Velocity $|$ Waterloo, Canada}{Sept 2025 - Dec 2025}
+      {}{}
+      \vspace{-13pt}
+      \resumeItemListStart
+      \vspace{-2pt}
+        \resumeItem{Managed event operations end-to-end with \textbf{incident response} mindset---\textbf{identified and escalated issues}, \textbf{minimizing business impact} under \textbf{constant deadlines} while coordinating attendee support in a \textbf{fast-paced environment}.}
+        \vspace{-2pt}
+        \resumeItem{\textbf{Explored emerging technology} programs and synthesized messaging for diverse audiences; \textbf{thirst for constantly exploring} new innovations in \textbf{cyber} and \textbf{cloud} platforms.}
+      \resumeItemListEnd
+      \vspace{-2pt}
+  \resumeSubHeadingListEnd
+\vspace{-13pt}
+\section{Certifications and Awards}
+    \resumeSubHeadingListStart
+      \item[]
+          \resumeItemListStart
+            \resumeItem{LinkedIn \textbf{Data Analysis Certification} $|$ \textbf{AWS Beginners} (Cloud \& Infrastructure Security) $|$ \textbf{Postman API} $|$ Won \textbf{Gold Sponsor TD Best AI Hack} (\textbf{Fraud Detection}) at \textbf{GenAI Genesis 2026}}
+          \resumeItemListEnd
+          \vspace{-8pt}
+        
+   \resumeSubHeadingListEnd
+
+\end{document}

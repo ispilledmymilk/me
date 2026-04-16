@@ -1,0 +1,270 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+% \input{glyphtounicode}  % Commented out - file not found
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{8pt}
+\setlength{\footskip}{8pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.75in}
+\addtolength{\evensidemargin}{-0.75in}
+\addtolength{\textwidth}{1.50in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% Slightly tighter lines to help keep the resume to one page
+\linespread{0.93}
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-3pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\[-2pt]
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-6pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+%----------HEADING----------
+
+\vspace{-28pt}
+\begin{center}
+    {\Huge \scshape Sai Pranavi Kasturi} \\ 
+    
+    \small +1-437-388-2829 | \underline{pkasturi@uwaterloo.ca} | \href{https://linkedin.com/in/sai-pranavi-kasturi-704807298}{\underline{linkedin.com/in/sai-pranavi-kasturi}} | \href{https://github.com/ispilledmymilk}{\underline{github.com/ispilledmymilk}} | \href{https://ispilledmymilk.github.io/me/}{\underline{ispilledmymilk.github.io/me}}
+    \vspace{-10pt}
+\end{center}
+
+\vspace{-10pt}
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Waterloo}{Sept 2024 -- Present}
+      {Bachelor of Computer Science - 2B}{Waterloo, Canada}
+  \resumeSubHeadingListEnd
+\vspace{-8pt}
+  
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.05in, label={}]
+  \small\item{
+    Python, Java, SQL, Bash, Shell Scripting, Docker, Kubernetes, Kustomize, GitHub, GitHub Actions, GitLab CI, Bitbucket, CI/CD, Azure, AWS, Linux, Git, DevOps, Observability, Monorepo, PostgreSQL, MongoDB, Redis, REST APIs, FastAPI, Spring Boot, Angular, Next.js, JWT, Maven, JUnit, pytest, Ruff, Postman, Playwright, Flyway, GoLang, JavaScript, TypeScript, Node.js, C++, JIRA, Agile, SDLC, Pandas, NumPy, scikit-learn, Matplotlib, Figma
+  }
+\end{itemize}
+ \vspace{-18pt}
+
+%-----------EXPERIENCE-----------
+\vspace{1.20pt}
+\section{Experience}
+
+    \resumeSubHeadingListStart
+     \vspace{-2pt} 
+    \resumeSubheading
+        {Automation Developer $|$ Zoocasa $|$ Toronto, Canada}{Jan 2026 - Apr 2026} 
+      {}{}
+      \vspace{-14pt} 
+          \resumeItemListStart
+            \resumeItem{Built automated \textbf{CI/CD pipelines} and \textbf{DevOps tooling} across JS and GoLang codebases using \textbf{Python} and \textbf{shell scripts}, enabling \textbf{self-service} deployment workflows---\textbf{reduced manual processes by 60\%} and \textbf{accelerated release cycles} across all product teams.}
+            \vspace{-2pt}
+            \resumeItem{Engineered an \textbf{AI-powered} tool with automated \textbf{deployment pipeline}; managed \textbf{secrets} and API key configurations, adhered to \textbf{cloud security} practices, and ensured \textbf{defect-free} code through \textbf{testing, validation, and integration}.}
+            \vspace{-2pt}
+            \resumeItem{Performed \textbf{root-cause analysis and resolution of application defects} across \textbf{cross-language codebases}; \textbf{documented} findings with structured \textbf{deployment plans} and \textbf{infrastructure} configurations---reduced recurring defects by \textbf{47\%}. Managed deliverables using \textbf{JIRA} in \textbf{Agile} sprints.}
+          \resumeItemListEnd
+          \vspace{-6pt} 
+      \resumeSubheading
+        {QA Specialist $|$ DocTalk $|$ Toronto, Canada}{May 2025 - Aug 2025}
+      {}{}
+      \vspace{-14pt}   
+          \resumeItemListStart
+            \resumeItem{Architected scalable \textbf{testing and validation infrastructure} covering \textbf{1000+ scenarios} across \textbf{REST APIs} and application services; \textbf{set up development environments} with \textbf{Docker} and automated testing tools, ensuring \textbf{defect-free} deployments prior to each production release.}
+            \vspace{-2pt} 
+            \resumeItem{\textbf{Documented system deployment plans} and \textbf{1500+ system requirements}; \textbf{reviewed and assessed new technologies} through \textbf{POC} evaluations, working through \textbf{testing, validation, and integration} for internal tools and \textbf{documented findings}.}
+            \vspace{-2pt}   
+            \resumeItem{\textbf{Provided recommendations} with full \textbf{usability analysis}; contributed to \textbf{system enhancements} improving platform reliability and deployment efficiency. \textbf{Continuously enhanced knowledge} of \textbf{leading-edge technologies} for effective \textbf{solution delivery}.}
+          \resumeItemListEnd
+          \vspace{-4pt}
+    \resumeSubheading
+        {Market Analyst Consultant $|$ Happy Sneeze $|$ USA, Remote}{Apr 2024 - Jul 2024}
+        {}{}
+      \vspace{-14pt}   
+          \resumeItemListStart
+            \resumeItem{Built automated \textbf{data pipelines} using \textbf{Python} and \textbf{shell scripts} to extract, transform, and process large datasets across \textbf{15+} data sources; applied \textbf{validation checks} ensuring pipeline reliability and data accuracy for the \textbf{financial industry}.}
+            \vspace{-2pt}        
+            \resumeItem{Developed \textbf{robust processes} and \textbf{documentation} for data workflows; automated reporting using \textbf{Python scripting} and \textbf{visualization} tools (\textbf{Matplotlib}, Tableau) to deliver structured analyses for executive consumption.}
+             \vspace{-2pt}        
+            \resumeItem{Cross-referenced \textbf{10+} data sources to identify discrepancies; built \textbf{automated quality checks} and synthesized complex data into actionable recommendations aligned with business objectives.}
+            \vspace{-2pt}        
+          \resumeItemListEnd
+                
+   \resumeSubHeadingListEnd 
+
+%-----------PROJECTS-----------
+\vspace{-16pt}
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+          {\textbf{OmenAI} \textbar\ \textbf{TD Best AI Hack --- Gold Sponsor Winner} $|$ \emph{\textbf{Python, PostgreSQL, NextJS, Redis, Docker}}}{Mar 2026}
+    \resumeItemListStart
+    \resumeItem{\textbf{Designed and deployed} a real-time data pipeline ingesting \textbf{600K+ records} on \textbf{containerized cloud infrastructure} using \textbf{Python}, \textbf{PostgreSQL} (\textbf{SQL}), and \textbf{Redis}; built \textbf{CI}-integrated \textbf{testing and validation} workflows across streaming feeds and \textbf{REST endpoints}.}
+    \vspace{-2pt}
+    \resumeItem{Built \textbf{automated deployment pipelines} processing \textbf{3 data categories} with \textbf{sub-second latency}; \textbf{documented system deployment plans} and delivered dashboards to \textbf{TD} judges---won \textbf{Gold Sponsor} at \textbf{GenAI Genesis 2026}.}
+          \resumeItemListEnd 
+          \vspace{-18pt}
+
+      \resumeProjectHeading
+{\textbf{RefiMatch} $|$ \emph{\textbf{Python, FastAPI, Kubernetes, Kustomize, pytest, GitHub Actions, Ruff}}}{Apr 2026}
+\resumeItemListStart
+    \resumeItem{Built \textbf{GitHub Actions CI/CD pipeline} with \textbf{Ruff} \textbf{code quality} scans, automated \textbf{pytest} testing, and quality gates enforcing \textbf{defect-free code deployment} on every push---\textbf{blocked 12+ breaking changes} pre-merge in the first two weeks of development.}
+    \vspace{-2pt}
+    \resumeItem{\textbf{Deployed} and managed \textbf{4 Kubernetes} services (Postgres, Redis, Job ingestion) with \textbf{Kustomize}; \textbf{documented system deployment plans} and validated \textbf{30+ service contracts} end-to-end for reliable \textbf{infrastructure}.}
+\resumeItemListEnd
+          \vspace{-18pt}
+
+      \resumeProjectHeading
+          {\textbf{Weathwise} $|$ \emph{\textbf{Java, Spring Boot, Angular, TypeScript, PostgreSQL, MongoDB, Docker, JWT}}}{Dec 2025}
+          \resumeItemListStart
+            \resumeItem{\textbf{Set up development environments} with \textbf{Docker Compose} orchestrating \textbf{multi-service infrastructure} (\textbf{PostgreSQL}, \textbf{MongoDB}, reverse proxy); designed \textbf{modularized application} architecture separating transactional and analytical services with automated \textbf{database} readiness checks.}
+            \vspace{-2pt}
+            \resumeItem{Delivered \textbf{automated CI/CD and deployment pipelines} with \textbf{infrastructure} configuration, \textbf{schema versioning} (\textbf{Flyway}), and contract-driven \textbf{API documentation}---\textbf{95\%+} deployment success rate with \textbf{zero critical issues} in production.}
+          \resumeItemListEnd
+          \vspace{-8pt}
+          
+    \resumeSubHeadingListEnd
+\vspace{-6pt}
+
+%-----------INVOLVEMENT---------------
+\section{Extracurriculars}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Events Director $|$ UW Product Management Club $|$ Waterloo, Canada}{Sept 2025 - Dec 2025}
+      {}{}
+      \vspace{-13pt}
+      \resumeItemListStart
+      \vspace{-2pt}
+        \resumeItem{Led E2E \textbf{project planning and execution} for campus events, \textbf{independently managing deadlines} while \textbf{multitasking} between logistics, stakeholders, and post-event follow-up.}
+        \vspace{-2pt}
+        \resumeItem{Organized teams and delegated tasks with \textbf{high attention to detail}, developing \textbf{clear communications} and demonstrating \textbf{results-oriented project management}.}
+      \resumeItemListEnd
+      \vspace{-5pt}
+    \resumeSubheading
+      {Campus Ambassador $|$ Velocity $|$ Waterloo, Canada}{Sept 2025 - Dec 2025}
+      {}{}
+      \vspace{-13pt}
+      \resumeItemListStart
+      \vspace{-2pt}
+        \resumeItem{Managed \textbf{event day operations} end-to-end, coordinating logistics and attendee support under \textbf{time-sensitive} conditions.}
+        \vspace{-2pt}
+        \resumeItem{Promoted campus programs through targeted campaigns, \textbf{synthesizing messaging} for different audiences to maximize engagement.}
+      \resumeItemListEnd
+      \vspace{-2pt}
+  \resumeSubHeadingListEnd
+\vspace{-13pt}
+\section{Certifications and Awards}
+    \resumeSubHeadingListStart
+      \item[]
+          \resumeItemListStart
+            \resumeItem{\textbf{AWS Beginners Certification} $|$ LinkedIn \textbf{Data Analysis} $|$ \textbf{Postman API} $|$ Won \textbf{Gold Sponsor TD Best AI Hack} at \textbf{GenAI Genesis 2026} $|$ \textbf{Continuously exploring leading-edge technologies}}
+          \resumeItemListEnd
+          \vspace{-8pt}
+        
+   \resumeSubHeadingListEnd
+
+\end{document}

@@ -1,0 +1,270 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+% \input{glyphtounicode}  % Commented out - file not found
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{8pt}
+\setlength{\footskip}{8pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.75in}
+\addtolength{\evensidemargin}{-0.75in}
+\addtolength{\textwidth}{1.50in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% Slightly tighter lines to help keep the resume to one page
+\linespread{0.93}
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-3pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\[-2pt]
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-6pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+%----------HEADING----------
+
+\vspace{-28pt}
+\begin{center}
+    {\Huge \scshape Sai Pranavi Kasturi} \\ 
+    
+    \small +1-437-388-2829 | \underline{pkasturi@uwaterloo.ca} | \href{https://linkedin.com/in/sai-pranavi-kasturi-704807298}{\underline{linkedin.com/in/sai-pranavi-kasturi}} | \href{https://github.com/ispilledmymilk}{\underline{github.com/ispilledmymilk}} | \href{https://ispilledmymilk.github.io/me/}{\underline{ispilledmymilk.github.io/me}}
+    \vspace{-10pt}
+\end{center}
+
+\vspace{-10pt}
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Waterloo}{Sept 2024 -- Present}
+      {Bachelor of Computer Science - 2B}{Waterloo, Canada}
+  \resumeSubHeadingListEnd
+\vspace{-8pt}
+
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.05in, label={}]
+  \small\item{
+    \textbf{Power BI}, \textbf{Tableau}, \textbf{Excel}, \textbf{PowerPoint}, SQL, Python (Pandas, NumPy, Matplotlib, SciPy), Data Visualization, Digital Analytics, KPI Reporting, Market Analysis, Roadmap Development, ETL, Process Mapping, Agile, SDLC, JIRA, Confluence, PostgreSQL, MongoDB, Redis, REST APIs, Git, GitHub Actions, CI/CD, Docker, Kubernetes, AWS, Azure, Java, JavaScript, TypeScript, Spring Boot, Angular, FastAPI, Next.js, JWT, Postman, pytest, Linux, Bash, LLM, RAG, LangChain, OpenAI API, Figma
+  }
+\end{itemize}
+\vspace{-18pt}
+
+%-----------EXPERIENCE-----------
+\vspace{1.20pt}
+\section{Experience}
+
+    \resumeSubHeadingListStart
+     \vspace{-2pt} 
+    \resumeSubheading
+        {Automation Developer $|$ Zoocasa $|$ Toronto, Canada}{Jan 2026 - Apr 2026} 
+      {}{}
+      \vspace{-14pt} 
+          \resumeItemListStart
+            \resumeItem{Built automated \textbf{digital analytics pipelines} tracking \textbf{key performance metrics} across product codebases---\textbf{identified opportunities to drive additional value and growth} by \textbf{translating data into information}, \textbf{reducing manual reporting effort by 60\%} and enabling \textbf{faster decision-making} across \textbf{cross-functional product teams}.}
+            \vspace{-2pt}
+            \resumeItem{Engineered an \textbf{AI-powered digital tool} surfacing \textbf{natural-language insights} over compliance documents---a \textbf{digital innovation} initiative that \textbf{supported roadmap delivery}, \textbf{educated business partners}, and \textbf{optimized customer-facing operational processes} end-to-end.}
+            \vspace{-2pt}
+            \resumeItem{Conducted \textbf{ongoing analysis and evaluation} of \textbf{digital performance} metrics, \textbf{identifying} systemic issues and delivering \textbf{structured reports} to \textbf{senior leadership}---\textbf{reduced recurring incidents by 47\%}. Managed deliverables in a \textbf{fast-paced Agile} environment (\textbf{JIRA}, \textbf{Confluence}).}
+          \resumeItemListEnd
+          \vspace{-6pt} 
+      \resumeSubheading
+        {QA Specialist $|$ DocTalk $|$ Toronto, Canada}{May 2025 - Aug 2025}
+      {}{}
+      \vspace{-14pt}   
+          \resumeItemListStart
+            \resumeItem{Developed \textbf{digital performance metrics} and \textbf{monthly/quarterly reporting} across \textbf{1000+ scenarios}; \textbf{supported delivery of initiatives} critical to \textbf{optimizing customer experiences} and provided \textbf{analytical support} to \textbf{cross-functional} Product and Engineering teams.}
+            \vspace{-2pt} 
+            \resumeItem{Worked with \textbf{business partners} to \textbf{define 1500+ business requirements} and \textbf{identify opportunities} to drive \textbf{digital engagement}; delivered \textbf{specialized analysis} covering process gaps and \textbf{customer journey} failure modes---enabling \textbf{data-driven roadmap decisions}.}
+            \vspace{-2pt}   
+            \resumeItem{Analyzed \textbf{digital product} data across \textbf{user segments}; used \textbf{data visualization} to \textbf{support strategic initiatives} and \textbf{communicated results} to \textbf{stakeholders}---synthesizing \textbf{customer insights} into \textbf{actionable recommendations} that improved \textbf{digital sales and servicing} outcomes.}
+          \resumeItemListEnd
+          \vspace{-4pt}
+    \resumeSubheading
+        {Market Analyst Consultant $|$ Happy Sneeze $|$ USA, Remote}{Apr 2024 - Jul 2024}
+        {}{}
+      \vspace{-14pt}   
+          \resumeItemListStart
+            \resumeItem{\textbf{Conducted market analysis on key digital engagement features and performance metrics} across \textbf{15+} competitors; benchmarked \textbf{digital product} capabilities using \textbf{ETL}, \textbf{SQL}, and \textbf{Python}---generating \textbf{actionable insights} to \textbf{support roadmap development} and \textbf{leadership decision-making}.}
+            \vspace{-2pt}        
+            \resumeItem{\textbf{Supported monthly and quarterly reporting} on \textbf{strategic initiatives}: tracked \textbf{key digital KPIs} (growth rate, market share, emerging trends) using \textbf{SQL}, \textbf{Python}, \textbf{Matplotlib}, and \textbf{Tableau}---delivered \textbf{structured analyses} and \textbf{presentations} suitable for \textbf{executive consumption}.}
+             \vspace{-2pt}        
+            \resumeItem{\textbf{Established effective relationships} across \textbf{Analytics, Marketing, and Product} partners; \textbf{identified opportunities to drive additional value and growth}, synthesizing complex \textbf{financial services} data into \textbf{digestible summaries} and \textbf{recommendations} to advance the \textbf{long-term roadmap}.}
+            \vspace{-2pt}        
+          \resumeItemListEnd
+                
+   \resumeSubHeadingListEnd 
+
+%-----------PROJECTS-----------
+\vspace{-16pt}
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+          {\textbf{OmenAI} \textbar\ \textbf{TD Best AI Hack --- Gold Sponsor Winner} $|$ \emph{\textbf{Python, scikit-learn, SQL, PostgreSQL, Next.js, Redis}}}{Mar 2026}
+    \resumeItemListStart
+    \resumeItem{Built a real-time \textbf{digital analytics dashboard} ingesting \textbf{600K+ transactions}, tracking \textbf{key performance metrics} across \textbf{12+ KPI dimensions}---delivered \textbf{Power BI}-style \textbf{data visualization} and \textbf{non-standard reporting} to \textbf{support roadmap development} and \textbf{strategic initiative} evaluation at \textbf{TD}.}
+    \vspace{-2pt}
+    \resumeItem{\textbf{Identified opportunities to drive value and growth} by surfacing \textbf{digital engagement} patterns (\textbf{anomaly detection}, risk scoring); \textbf{communicated results} to \textbf{TD senior leadership} and won \textbf{Gold Sponsor} at \textbf{GenAI Genesis 2026}---showcasing \textbf{digital innovation} within \textbf{Canadian financial services}.}
+          \resumeItemListEnd 
+          \vspace{-18pt}
+
+      \resumeProjectHeading
+          {\textbf{RefiMatch} $|$ \emph{\textbf{Swift/SwiftUI, FastAPI, Python, Kubernetes, PostgreSQL, GitHub Actions}}}{Apr 2026}
+          \resumeItemListStart
+            \resumeItem{Built an AI-powered \textbf{digital banking platform} for \textbf{mortgage and refinance} (\textbf{Real Estate Secured Lending}) that performs \textbf{complex analysis} on refinance scenarios, delivers personalized \textbf{customer journey} recommendations, and \textbf{optimizes the customer experience} across the \textbf{homeownership financial journey}.}
+            \vspace{-2pt}
+            \resumeItem{Engineered \textbf{automated data pipelines} with \textbf{$\sim$80 validation checks} and \textbf{4 Kubernetes} services with \textbf{CI/CD}; \textbf{supported delivery} of a \textbf{digital product roadmap} from end-to-end---demonstrating capability to \textbf{drive digital KPIs} across \textbf{sales and servicing} for \textbf{Canadian Personal Banking}.}
+          \resumeItemListEnd
+          \vspace{-18pt}
+
+      \resumeProjectHeading
+          {\textbf{Weathwise} $|$ \emph{\textbf{Java, Spring Boot, Angular, TypeScript, PostgreSQL, MongoDB, Docker}}}{Dec 2025}
+          \resumeItemListStart
+            \resumeItem{Designed a \textbf{personal banking} platform covering \textbf{everyday savings and investing} (\textbf{chequing, savings, financial aggregation}) with a \textbf{multi-database analytics architecture}---built \textbf{per-user batch processing} achieving \textbf{95\%+} success rate, enabling \textbf{ongoing performance tracking} and \textbf{digital engagement reporting}.}
+            \vspace{-2pt}
+            \resumeItem{Delivered \textbf{automated reporting pipelines} with \textbf{Docker}, contract-driven \textbf{API documentation}, and \textbf{data validation}---\textbf{zero data integrity issues}; \textbf{identified opportunities to enhance} \textbf{customer experience} through \textbf{digital transformation} of personal finance workflows.}
+          \resumeItemListEnd
+          \vspace{-8pt}
+          
+    \resumeSubHeadingListEnd
+\vspace{-6pt}
+
+%-----------INVOLVEMENT---------------
+\section{Extracurriculars}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Events Director $|$ UW Product Management Club $|$ Waterloo, Canada}{Sept 2025 - Dec 2025}
+      {}{}
+      \vspace{-13pt}
+      \resumeItemListStart
+      \vspace{-2pt}
+        \resumeItem{Led E2E \textbf{strategic initiative} planning and execution, \textbf{collaborating with senior leadership} and \textbf{cross-functional teams} to \textbf{deliver quality results} on tight timelines---\textbf{supported a positive team environment} promoting \textbf{innovation} and \textbf{digital engagement}.}
+        \vspace{-2pt}
+        \resumeItem{\textbf{Developed presentations/communications} for \textbf{stakeholders}; \textbf{independently delivered} assigned initiatives with \textbf{high attention to detail}, \textbf{broadening professional network} and \textbf{building critical career capabilities}.}
+      \resumeItemListEnd
+      \vspace{-5pt}
+    \resumeSubheading
+      {Campus Ambassador $|$ Velocity $|$ Waterloo, Canada}{Sept 2025 - Dec 2025}
+      {}{}
+      \vspace{-13pt}
+      \resumeItemListStart
+      \vspace{-2pt}
+        \resumeItem{Managed \textbf{digital and event operations} end-to-end; \textbf{identified opportunities to drive additional engagement and growth} through targeted \textbf{digital campaigns} and \textbf{community-building} initiatives.}
+        \vspace{-2pt}
+        \resumeItem{\textbf{Remained informed of emerging trends} in \textbf{digital innovation} and \textbf{financial services}; synthesized messaging for diverse audiences to \textbf{support strategic programs} and \textbf{drive customer engagement}.}
+      \resumeItemListEnd
+      \vspace{-2pt}
+  \resumeSubHeadingListEnd
+\vspace{-13pt}
+\section{Certifications and Awards}
+    \resumeSubHeadingListStart
+      \item[]
+          \resumeItemListStart
+            \resumeItem{LinkedIn \textbf{Data Analysis Certification} $|$ \textbf{AWS Beginners} $|$ \textbf{Postman API} $|$ Won \textbf{Gold Sponsor TD Best AI Hack} at \textbf{GenAI Genesis 2026} --- \textbf{digital innovation} in \textbf{financial services}}
+          \resumeItemListEnd
+          \vspace{-8pt}
+        
+   \resumeSubHeadingListEnd
+
+\end{document}
