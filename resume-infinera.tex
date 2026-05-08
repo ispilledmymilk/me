@@ -1,0 +1,267 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+% \input{glyphtounicode}  % Commented out - file not found
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{8pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.75in}
+\addtolength{\evensidemargin}{-0.75in}
+\addtolength{\textwidth}{1.50in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+\linespread{0.93}
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-3pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\[-2pt]
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-6pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+%----------HEADING----------
+
+\vspace{-28pt}
+\begin{center}
+    {\Huge \scshape Sai Pranavi Kasturi} \\
+    \small +1-437-388-2829 $|$ \underline{pkasturi@uwaterloo.ca} $|$
+    \href{https://linkedin.com/in/sai-pranavi-kasturi-704807298}{\underline{linkedin.com/in/sai-pranavi-kasturi}} $|$
+    \href{https://github.com/ispilledmymilk}{\underline{github.com/ispilledmymilk}} $|$
+    \href{https://ispilledmymilk.github.io/me/}{\underline{ispilledmymilk.github.io/me}}
+    \vspace{-10pt}
+\end{center}
+
+\vspace{-10pt}
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Waterloo}{Sept 2024 -- Present}
+      {Bachelor of Computer Science --- 2B}{Waterloo, Canada}
+  \resumeSubHeadingListEnd
+\vspace{-8pt}
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.05in, label={}]
+  \small\item{
+    \textbf{C++}, \textbf{Python}, \textbf{Java}, Embedded Systems, Arduino, Raspberry Pi 4, Real-time Systems, Firmware, DSP, Serial Protocol, Hardware Testing, Fault Injection, Control Systems, \textbf{Git}, \textbf{CMake}, Jenkins, GitLab CI, GitHub Actions, CI/CD, Database API Development, REST APIs, FastAPI, PostgreSQL, MongoDB, Redis, SQLite, SQL, Docker, Kubernetes, JavaScript, TypeScript, GoLang, Swift, Node.js, Spring Boot, Angular, Next.js, JIRA, Agile, SDLC, pytest, Playwright, Postman, Linux, Bash, OOP, SOLID, LLM, RAG, AWS, Azure
+  }
+\end{itemize}
+\vspace{-18pt}
+
+%-----------EXPERIENCE-----------
+\vspace{1.20pt}
+\section{Experience}
+
+    \resumeSubHeadingListStart
+     \vspace{-2pt}
+    \resumeSubheading
+        {Automation Developer $|$ Zoocasa $|$ Toronto, Canada}{Jan 2026 -- Apr 2026}
+      {}{}
+      \vspace{-14pt}
+          \resumeItemListStart
+            \resumeItem{Developed \textbf{real-time data processing pipelines} across \textbf{JavaScript} and \textbf{GoLang} codebases with \textbf{performance-critical} throughput targets---applied \textbf{systems-level optimization} to reduce processing latency by \textbf{60\%}, paralleling \textbf{real-time embedded control system} design principles.}
+            \vspace{-2pt}
+            \resumeItem{Designed and shipped a \textbf{database API} backend (\textbf{REST APIs}, structured \textbf{JSON} output generation, real-time document change detection)---contributed to \textbf{firmware-adjacent} \textbf{real-time coding} and \textbf{database API development}, with automated \textbf{CI/CD} (\textbf{GitHub Actions}, parallel to \textbf{Jenkins}) for repeatable, validated builds.}
+            \vspace{-2pt}
+            \resumeItem{Performed \textbf{root-cause analysis and resolution} of \textbf{production defects}; \textbf{reviewed peer code} and \textbf{debugged} systemic issues using \textbf{JIRA}---\textbf{reduced recurring defects by 47\%}. Applied \textbf{SDLC} and \textbf{Agile} practices with \textbf{Git}-tracked change management across all development workflows.}
+          \resumeItemListEnd
+          \vspace{-6pt}
+      \resumeSubheading
+        {QA Specialist $|$ DocTalk $|$ Toronto, Canada}{May 2025 -- Aug 2025}
+      {}{}
+      \vspace{-14pt}
+          \resumeItemListStart
+            \resumeItem{Built \textbf{system validation infrastructure} covering \textbf{1000+ test scenarios} across \textbf{REST APIs} and application services; performed \textbf{end-to-end system functional and performance testing}---ensured \textbf{zero regressions} on owned features through rigorous \textbf{test plan} execution and \textbf{traceable test reports}.}
+            \vspace{-2pt}
+            \resumeItem{Defined \textbf{1500+ system requirements} and acceptance criteria; developed \textbf{test plans} and \textbf{traceability matrices} for \textbf{system validation}---demonstrated structured \textbf{firmware testing} discipline and \textbf{database API} validation across all application services.}
+            \vspace{-2pt}
+            \resumeItem{Shipped \textbf{system enhancements} and \textbf{real-time} application features end-to-end; \textbf{contributed to digital system simulation} by modeling edge cases and failure modes---strong \textbf{oral and written communication} to cross-functional engineering and product stakeholders.}
+          \resumeItemListEnd
+          \vspace{-4pt}
+    \resumeSubheading
+        {Market Analyst Consultant $|$ Happy Sneeze $|$ USA, Remote}{Apr 2024 -- Jul 2024}
+        {}{}
+      \vspace{-14pt}
+          \resumeItemListStart
+            \resumeItem{Built \textbf{automated data processing pipelines} in \textbf{Python} and \textbf{SQL} across \textbf{15+} sources; applied \textbf{systems-level analytical thinking} and \textbf{performance optimization} to extract, transform, and process large datasets---developed \textbf{process documentation} and \textbf{structured reporting} for engineering and leadership audiences.}
+            \vspace{-2pt}
+            \resumeItem{Developed \textbf{automated reporting} and \textbf{simulation models} tracking system-level \textbf{KPIs} (growth rate, throughput, trends) using \textbf{Python} and visualization tools; delivered \textbf{structured analyses} under \textbf{time-sensitive} conditions---demonstrated \textbf{strong technical communication} skills.}
+            \vspace{-2pt}
+            \resumeItem{Built \textbf{robust processes and documentation} cross-referencing \textbf{10+} data sources; applied \textbf{Git}-based version control and \textbf{systematic testing methodology}---demonstrated \textbf{intention to contribute} to program success through \textbf{organized, detail-oriented} execution.}
+          \resumeItemListEnd
+
+   \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\vspace{-16pt}
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+          {\textbf{Alarmy} $|$ \emph{\textbf{C++/Java, Arduino, Embedded Firmware, Serial Protocol, Git}}}{Sept 2023}
+    \resumeItemListStart
+        \resumeItem{Engineered a \textbf{real-time embedded control system} test harness for \textbf{Arduino firmware}: implemented \textbf{serial protocol tracing}, \textbf{timed actuator assertions}, and \textbf{Git}-tracked regression fixtures---performed \textbf{firmware testing}, \textbf{hardware modeling}, and \textbf{power-loss recovery} / \textbf{motor-drive fault injection} validation.}
+        \vspace{-2pt}
+        \resumeItem{\textbf{Developed 20+ automated test scripts} for \textbf{embedded control system} validation: tightened \textbf{real-time loop latency} through iterative \textbf{DSP}-style timing optimization; published \textbf{traceable QA artifacts} (15+ documented cases) for \textbf{regression sign-off}---achieved \textbf{80\% measured pass rate} on full test matrix.}
+    \resumeItemListEnd
+    \vspace{-18pt}
+
+    \resumeProjectHeading
+        {\textbf{AuraGlass} $|$ \emph{\textbf{C++ / JavaScript, Raspberry Pi 4, Bash, GitLab CI, OpenAI, Cloud APIs}}}{Oct 2024}
+        \resumeItemListStart
+            \resumeItem{Built a \textbf{real-time embedded control system} on \textbf{Raspberry Pi 4}: modular \textbf{firmware-adjacent} services behind a \textbf{Bash-orchestrated boot path} with \textbf{latency-budgeted} real-time control loops---integrated \textbf{Cloud APIs} (Google Calendar, OpenAI) with \textbf{GitLab CI} for repeatable, \textbf{validated builds} parallel to \textbf{Jenkins} pipelines.}
+            \vspace{-2pt}
+            \resumeItem{Performed \textbf{end-to-end system testing} across \textbf{7 hardware modules}: \textbf{API quota handling}, \textbf{graceful degradation} under failure conditions, and \textbf{latency optimization}---benchmarked \textbf{$\sim$90\% scenario pass rate} on acceptance scripts; contributed to \textbf{digital system simulation} for \textbf{system optimization and validation}.}
+        \resumeItemListEnd
+    \vspace{-18pt}
+
+    \resumeProjectHeading
+        {\textbf{RefiMatch} $|$ \emph{\textbf{Python, C++ (scoring engine), FastAPI, PostgreSQL, Kubernetes, pytest, GitHub Actions}}}{Apr 2026}
+        \resumeItemListStart
+            \resumeItem{Developed a \textbf{database API} layer (\textbf{FastAPI} + \textbf{PostgreSQL} + \textbf{pgvector}) with \textbf{Pydantic} contract validation; integrated \textbf{CI/CD} via \textbf{GitHub Actions} (parallel to \textbf{Jenkins}) with automated \textbf{test execution}---\textbf{$\sim$80 automated test cases} ensuring \textbf{system validation} across \textbf{30+ API contracts}.}
+            \vspace{-2pt}
+            \resumeItem{Designed \textbf{system deployment plans} across \textbf{4 Kubernetes services}; implemented \textbf{CMake}-style modular build separation (scoring library, agent, API, ingest) with \textbf{Docker} images---repeatable, \textbf{environment-agnostic} pipeline from local development to \textbf{system integration testing}.}
+        \resumeItemListEnd
+    \vspace{-8pt}
+
+    \resumeSubHeadingListEnd
+\vspace{-6pt}
+
+%-----------INVOLVEMENT---------------
+\section{Extracurriculars}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Events Director $|$ UW Product Management Club $|$ Waterloo, Canada}{Sept 2025 -- Dec 2025}
+      {}{}
+      \vspace{-13pt}
+      \resumeItemListStart
+      \vspace{-2pt}
+        \resumeItem{Demonstrated \textbf{intention to contribute for the success of the program}: led end-to-end execution, \textbf{managed Git-tracked} deliverables across stakeholders, and delivered results with \textbf{high attention to detail} under tight deadlines.}
+        \vspace{-2pt}
+        \resumeItem{Strong \textbf{oral and written communication}: developed clear documentation and \textbf{cross-functional coordination} across diverse teams---showed \textbf{flexibility} in a \textbf{fast-paced, dynamic} environment.}
+      \resumeItemListEnd
+      \vspace{-5pt}
+    \resumeSubheading
+      {Campus Ambassador $|$ Velocity $|$ Waterloo, Canada}{Sept 2025 -- Dec 2025}
+      {}{}
+      \vspace{-13pt}
+      \resumeItemListStart
+      \vspace{-2pt}
+        \resumeItem{Managed real-time operations end-to-end; \textbf{adapted quickly} to dynamic, \textbf{fast-paced} conditions---demonstrated \textbf{strong problem-solving} and \textbf{systems thinking} under pressure.}
+        \vspace{-2pt}
+        \resumeItem{Actively explored \textbf{emerging technologies} in wireless and embedded systems; \textbf{communicated complex technical ideas} effectively to diverse audiences.}
+      \resumeItemListEnd
+      \vspace{-2pt}
+  \resumeSubHeadingListEnd
+\vspace{-13pt}
+
+\section{Certifications and Awards}
+    \resumeSubHeadingListStart
+      \item[]
+          \resumeItemListStart
+            \resumeItem{LinkedIn \textbf{Data Analysis Certification} $|$ \textbf{AWS Beginners} $|$ \textbf{Postman API} $|$ Won \textbf{Gold Sponsor --- TD Best AI Hack} (\textbf{Real-time Signal Processing \& Analytics}) at \textbf{GenAI Genesis 2026}}
+          \resumeItemListEnd
+          \vspace{-8pt}
+   \resumeSubHeadingListEnd
+
+\end{document}

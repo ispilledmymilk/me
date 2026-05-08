@@ -1,0 +1,267 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+% \input{glyphtounicode}  % Commented out - file not found
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{8pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.75in}
+\addtolength{\evensidemargin}{-0.75in}
+\addtolength{\textwidth}{1.50in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+\linespread{0.93}
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-3pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\[-2pt]
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-6pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+%----------HEADING----------
+
+\vspace{-28pt}
+\begin{center}
+    {\Huge \scshape Sai Pranavi Kasturi} \\
+    \small +1-437-388-2829 $|$ \underline{pkasturi@uwaterloo.ca} $|$
+    \href{https://linkedin.com/in/sai-pranavi-kasturi-704807298}{\underline{linkedin.com/in/sai-pranavi-kasturi}} $|$
+    \href{https://github.com/ispilledmymilk}{\underline{github.com/ispilledmymilk}} $|$
+    \href{https://ispilledmymilk.github.io/me/}{\underline{ispilledmymilk.github.io/me}}
+    \vspace{-10pt}
+\end{center}
+
+\vspace{-10pt}
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Waterloo}{Sept 2024 -- Present}
+      {Bachelor of Computer Science --- 2B}{Waterloo, Canada}
+  \resumeSubHeadingListEnd
+\vspace{-8pt}
+
+\section{Skills}
+\begin{itemize}[leftmargin=0.05in, label={}]
+  \small\item{
+    \textbf{MS Office:} \textbf{Excel} (pivot tables, modeling), \textbf{PowerPoint}, \textbf{Word}, \textbf{Outlook} $|$ \textbf{Python} (Pandas, NumPy, scikit-learn), \textbf{SQL}, \textbf{Power BI}, \textbf{Tableau}, ETL, Forecasting, Variance \& Trend Analysis, KPIs, Financial Data Analysis, Dashboards, Ad-Hoc Analysis, JIRA, Git, PostgreSQL, REST APIs, Docker, GitHub Actions, CI/CD, LLM, RAG, TypeScript, GoLang, Java, Spring Boot, Angular, Next.js, Azure, AWS
+  }
+\end{itemize}
+\vspace{-18pt}
+
+%-----------EXPERIENCE-----------
+\vspace{1.20pt}
+\section{Experience}
+
+    \resumeSubHeadingListStart
+     \vspace{-2pt}
+    \resumeSubheading
+        {Automation Developer $|$ Zoocasa $|$ Toronto, Canada}{Jan 2026 -- Apr 2026}
+      {}{}
+      \vspace{-14pt}
+          \resumeItemListStart
+            \resumeItem{\textbf{Delivered analytics and management reporting} by building automated \textbf{data extraction pipelines} across codebases---turning operational data into \textbf{forecasts, actionable insights}, and \textbf{variance explanations} for leadership; \textbf{reduced manual reporting effort 60\%} and \textbf{accelerated decision-making} in a time-sensitive, fast-paced environment.}
+            \vspace{-2pt}
+            \resumeItem{Built a \textbf{POC} analytics tool (\textbf{LLM}, \textbf{RAG}, \textbf{Python}) to analyze \textbf{compliance documents} and auto-generate \textbf{structured, auditable outputs}---\textbf{identified process improvement} opportunities; communicated results clearly in \textbf{executive-style summaries} for \textbf{internal controls} and compliance stakeholders.}
+            \vspace{-2pt}
+            \resumeItem{Conducted \textbf{quantitative root-cause analysis} on performance anomalies; prepared \textbf{structured findings} in \textbf{JIRA/Agile} to support risk oversight---\textbf{reduced recurring issues 47\%}. \textbf{Partnered cross-functionally} to prioritize issues and meet \textbf{deadline-driven} deliverables.}
+          \resumeItemListEnd
+          \vspace{-6pt}
+      \resumeSubheading
+        {QA Specialist $|$ DocTalk $|$ Toronto, Canada}{May 2025 -- Aug 2025}
+      {}{}
+      \vspace{-14pt}
+          \resumeItemListStart
+            \resumeItem{Applied \textbf{quantitative and qualitative methods} to develop \textbf{business metrics} and \textbf{ad-hoc performance reporting} across \textbf{1000+ data scenarios}---\textbf{identified trends, variances, and risk signals} in platform performance; delivered on-time \textbf{insights} for \textbf{Product and business partners}.}
+            \vspace{-2pt}
+            \resumeItem{\textbf{Partnered with business and technology stakeholders} to define \textbf{1500+ business requirements} and \textbf{structured process documentation} aligned to \textbf{control} expectations---\textbf{high attention to detail} and accuracy under \textbf{competing priorities} and \textbf{recurring reporting} timelines.}
+            \vspace{-2pt}
+            \resumeItem{Analyzed user-segment and operational data; used \textbf{data visualization} (\textbf{dashboards}) to illustrate \textbf{trends} and \textbf{performance drivers}; synthesized \textbf{complex data} into \textbf{concise recommendations}---\textbf{strong written and verbal communication} with non-technical audiences.}
+          \resumeItemListEnd
+          \vspace{-4pt}
+    \resumeSubheading
+        {Market Analyst Consultant $|$ Happy Sneeze $|$ USA, Remote}{Apr 2024 -- Jul 2024}
+        {}{}
+      \vspace{-14pt}
+          \resumeItemListStart
+            \resumeItem{Extracted, transformed, and \textbf{analyzed large financial datasets} across \textbf{15+ sources} using \textbf{ETL}, \textbf{SQL}, and \textbf{Python}---\textbf{identified trends, risks, and opportunities} to support \textbf{strategic}, \textbf{risk}, and \textbf{performance} decisions; supported \textbf{finance} and \textbf{strategy} stakeholders with \textbf{rigorous, deadline-driven} deliverables.}
+            \vspace{-2pt}
+            \resumeItem{Built \textbf{segment performance reporting} and \textbf{KPI dashboards} (market share, growth, sector trends) in \textbf{Tableau}; prepared \textbf{PowerPoint} decks and \textbf{Excel} workbooks for \textbf{executive} audiences with \textbf{driver-based} narratives (revenue, risk, performance) and clear \textbf{variance} storytelling under \textbf{compressed} timelines.}
+            \vspace{-2pt}
+            \resumeItem{Collaborated across \textbf{10+ stakeholders} to \textbf{gather requirements}, \textbf{reconcile} conflicting inputs, and \textbf{present recommendations}; demonstrated ability to work \textbf{independently and collaboratively} while \textbf{multi-tasking} in a \textbf{fast-paced} environment.}
+          \resumeItemListEnd
+
+   \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\vspace{-16pt}
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+          {\textbf{OmenAI} \textbar\ \textbf{TD Best AI Hack --- Gold Sponsor Winner} $|$ \emph{\textbf{Python (scikit-learn), SQL, PostgreSQL, Next.js, Redis}}}{Mar 2026}
+    \resumeItemListStart
+        \resumeItem{Engineered a real-time \textbf{risk analytics} dashboard on \textbf{600K+ transactions}---used \textbf{Python/SQL} and \textbf{quantitative methods} (Isolation Forest) to \textbf{detect anomalies} and \textbf{rank risk}; delivered \textbf{trends, risk, and opportunity} insights for \textbf{strategic} decision support with \textbf{zero} labeled training data (unsupervised).}
+        \vspace{-2pt}
+        \resumeItem{Built \textbf{executive-ready} visualizations on \textbf{12+} dimensions; \textbf{communicated} findings to \textbf{TD} senior leaders---\textbf{Gold Sponsor} at \textbf{GenAI Genesis 2026}, demonstrating \textbf{financial} and \textbf{risk} reporting communication suitable for \textbf{governance, controls,} and \textbf{management} audiences.}
+    \resumeItemListEnd
+    \vspace{-18pt}
+
+    \resumeProjectHeading
+          {\textbf{RefiMatch} $|$ \emph{\textbf{Python, FastAPI, PostgreSQL, Kubernetes, pytest, GitHub Actions}}}{Apr 2026}
+    \resumeItemListStart
+            \resumeItem{Prototyped a \textbf{financial product analytics} platform for \textbf{mortgage / refinance}---used \textbf{Pandas, NumPy}, and \textbf{quantitative} methods to \textbf{score} scenarios, produce \textbf{risk-adjusted} recommendations, and support \textbf{data-driven} lending decisions; \textbf{validated} outputs with \textbf{$\sim$80 automated} checks (\textbf{accuracy and controls}).}
+            \vspace{-2pt}
+            \resumeItem{Automated \textbf{reconciliation} of \textbf{30+} data points across \textbf{4 services} via \textbf{pipelines} and \textbf{CI/CD}---\textbf{streamlined} analytical workflows, improved \textbf{repeatability}, and reduced manual effort for \textbf{reporting} use cases; maintained clear \textbf{process documentation} for \textbf{auditability}.}
+    \resumeItemListEnd
+    \vspace{-18pt}
+
+    \resumeProjectHeading
+          {\textbf{Weathwise} $|$ \emph{\textbf{Java, Spring Boot, Angular, TypeScript, PostgreSQL, MongoDB, Docker, JWT}}}{Dec 2025}
+    \resumeItemListStart
+            \resumeItem{Designed \textbf{financial performance reporting} with separate \textbf{transactional} vs.\ \textbf{analytical} data layers---enables \textbf{segment} insight and \textbf{personal finance} views (savings, investments) with \textbf{95\%+} batch \textbf{reconciliation} success; \textbf{zero data integrity} issues across operations.}
+            \vspace{-2pt}
+            \resumeItem{Built \textbf{automated reporting} and \textbf{data validation} flows to support \textbf{ad-hoc analyses}; improved \textbf{tooling} and \textbf{documentation} to \textbf{identify} and \textbf{implement} process \textbf{efficiency}---\textbf{detail-oriented} execution in \textbf{reporting, controls,} and \textbf{data integrity} contexts similar to \textbf{finance} operations work.}
+    \resumeItemListEnd
+    \vspace{-8pt}
+
+    \resumeSubHeadingListEnd
+\vspace{-6pt}
+
+%-----------INVOLVEMENT---------------
+\section{Extracurriculars}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Events Director $|$ UW Product Management Club $|$ Waterloo, Canada}{Sept 2025 -- Dec 2025}
+      {}{}
+      \vspace{-13pt}
+      \resumeItemListStart
+      \vspace{-2pt}
+        \resumeItem{Led end-to-end planning; \textbf{prioritized} and \textbf{time-managed} competing workstreams in a \textbf{fast-paced} environment with \textbf{strong accuracy} on budgets, communications, and logistics---\textbf{delivered on time} and met \textbf{stakeholder} expectations \textbf{independently} and in teams.}
+        \vspace{-2pt}
+        \resumeItem{Wrote \textbf{clear, polished} materials for sponsors, vendors, and leadership; practiced \textbf{active listening} and \textbf{professional} collaboration across diverse groups---\textbf{interpersonal skills} and \textbf{initiative} aligned to high-performing, matrixed \textbf{finance} organizations.}
+      \resumeItemListEnd
+      \vspace{-5pt}
+    \resumeSubheading
+      {Campus Ambassador $|$ Velocity $|$ Waterloo, Canada}{Sept 2025 -- Dec 2025}
+      {}{}
+      \vspace{-13pt}
+      \resumeItemListStart
+      \vspace{-2pt}
+        \resumeItem{Managed on-site \textbf{operations} with shifting priorities; \textbf{adapted} quickly while maintaining \textbf{detail} and a \textbf{client-first} mindset in \textbf{high-traffic, deadline-driven} settings---strong \textbf{reliability} in \textbf{performance measurement} and event \textbf{reporting} contexts.}
+        \vspace{-2pt}
+        \resumeItem{\textbf{Communicated} clearly to diverse participants; \textbf{balanced} \textbf{multi-tasking} and \textbf{independent} ownership---\textbf{personal development} and \textbf{continuous learning} in a collaborative culture.}
+      \resumeItemListEnd
+      \vspace{-2pt}
+  \resumeSubHeadingListEnd
+\vspace{-13pt}
+
+\section{Certifications and Interests}
+    \resumeSubHeadingListStart
+      \item[]
+          \resumeItemListStart
+            \resumeItem{LinkedIn \textbf{Data Analysis} $|$ \textbf{AWS Beginners} $|$ \textbf{Postman API} $|$ \textbf{GenAI Genesis 2026:} \textbf{Gold Sponsor --- TD Best AI Hack} (\textbf{Financial Transaction Risk \& Management Reporting}) $|$ \textbf{Interest:} exploring \textbf{CPA/CFA} as long-term designations}
+          \resumeItemListEnd
+          \vspace{-8pt}
+   \resumeSubHeadingListEnd
+
+\end{document}

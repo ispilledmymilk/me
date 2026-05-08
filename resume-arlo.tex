@@ -1,0 +1,267 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+% \input{glyphtounicode}  % Commented out - file not found
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{8pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.75in}
+\addtolength{\evensidemargin}{-0.75in}
+\addtolength{\textwidth}{1.50in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+\linespread{0.93}
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-3pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\[-2pt]
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-6pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+%----------HEADING----------
+
+\vspace{-28pt}
+\begin{center}
+    {\Huge \scshape Sai Pranavi Kasturi} \\
+    \small +1-437-388-2829 $|$ \underline{pkasturi@uwaterloo.ca} $|$
+    \href{https://linkedin.com/in/sai-pranavi-kasturi-704807298}{\underline{linkedin.com/in/sai-pranavi-kasturi}} $|$
+    \href{https://github.com/ispilledmymilk}{\underline{github.com/ispilledmymilk}} $|$
+    \href{https://ispilledmymilk.github.io/me/}{\underline{ispilledmymilk.github.io/me}}
+    \vspace{-10pt}
+\end{center}
+
+\vspace{-10pt}
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Waterloo}{Sept 2024 -- Present}
+      {Bachelor of Computer Science --- 2B}{Waterloo, Canada}
+  \resumeSubHeadingListEnd
+\vspace{-8pt}
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.05in, label={}]
+  \small\item{
+    Embedded Systems, IoT, Arduino, Raspberry Pi 4, End-to-End System Testing, HW Troubleshooting, Test Automation, Test Script Development, Bug Tracking, Firmware Integration, Wireless (WiFi, BLE, REST APIs), Python, Java, JavaScript, Bash, GitLab CI, GitHub Actions, CI/CD, JIRA, Agile, SDLC, pytest, Playwright, Postman, Git, Docker, SQL, PostgreSQL, MongoDB, Redis, FastAPI, Spring Boot, Angular, Next.js, TypeScript, GoLang, Swift, Node.js, AWS, Azure, Linux, LLM, RAG, LangChain, OpenAI API, Figma, Excel, PowerPoint
+  }
+\end{itemize}
+\vspace{-18pt}
+
+%-----------EXPERIENCE-----------
+\vspace{1.20pt}
+\section{Experience}
+
+    \resumeSubHeadingListStart
+     \vspace{-2pt}
+    \resumeSubheading
+        {Automation Developer $|$ Zoocasa $|$ Toronto, Canada}{Jan 2026 -- Apr 2026}
+      {}{}
+      \vspace{-14pt}
+          \resumeItemListStart
+            \resumeItem{\textbf{Developed test scripts and automation programs} (\textbf{Playwright}, \textbf{Postman}) across \textbf{JavaScript} and \textbf{GoLang} codebases to \textbf{improve test efficiency and reliability}---\textbf{reduced manual test effort by 60\%}, accelerating release cycles and ensuring \textbf{end-to-end system} quality across all product teams.}
+            \vspace{-2pt}
+            \resumeItem{\textbf{Assisted to develop and automate process documentation} by engineering an \textbf{AI-powered} compliance tool (\textbf{LLM}, \textbf{RAG}): auto-generated \textbf{structured documentation} from source files with real-time change detection---eliminated manual documentation effort and delivered \textbf{reliable, up-to-date} outputs for cross-functional partners.}
+            \vspace{-2pt}
+            \resumeItem{\textbf{Supported issue tracking and troubleshooting}: performed \textbf{root-cause analysis} on production \textbf{bugs}, \textbf{reviewed peer code}, and \textbf{prioritized fixes} using \textbf{JIRA}---\textbf{reduced recurring defects by 47\%}. Operated in a \textbf{fast-paced, dynamic Agile} environment managing multiple concurrent deliverables.}
+          \resumeItemListEnd
+          \vspace{-6pt}
+      \resumeSubheading
+        {QA Specialist $|$ DocTalk $|$ Toronto, Canada}{May 2025 -- Aug 2025}
+      {}{}
+      \vspace{-14pt}
+          \resumeItemListStart
+            \resumeItem{\textbf{Followed project development checklists and test plans} to \textbf{create and document test results}: built \textbf{test automation infrastructure} covering \textbf{1000+ scenarios} across \textbf{REST APIs} and application services---\textbf{documented test reports} and maintained \textbf{traceability matrices} for release sign-off.}
+            \vspace{-2pt}
+            \resumeItem{\textbf{Performed end-to-end system functional and performance testing} on a \textbf{B2B SaaS platform}: validated \textbf{HW-agnostic application services}, \textbf{REST API} contracts, and \textbf{cloud}-side integrations---\textbf{zero production regressions} on owned features through rigorous \textbf{system integration testing}.}
+            \vspace{-2pt}
+            \resumeItem{\textbf{Cross-functional coordination}: worked with Product, Engineering, and Clinical stakeholders to \textbf{define 1500+ requirements}; \textbf{communicated test results} clearly both orally and in writing, supporting \textbf{schedule management} and on-time, high-quality delivery.}
+          \resumeItemListEnd
+          \vspace{-4pt}
+    \resumeSubheading
+        {Market Analyst Consultant $|$ Happy Sneeze $|$ USA, Remote}{Apr 2024 -- Jul 2024}
+        {}{}
+      \vspace{-14pt}
+          \resumeItemListStart
+            \resumeItem{\textbf{Assisted with schedule, material planning, and cross-functional coordination}: managed data collection and analysis pipelines across \textbf{15+ sources}, tracked \textbf{project milestones} under tight deadlines, and \textbf{coordinated with external partners} (ODM-equivalent vendors) to gather, validate, and synthesize data.}
+            \vspace{-2pt}
+            \resumeItem{\textbf{Developed and automated reporting processes} using \textbf{Python} and \textbf{SQL}; built \textbf{structured documentation} and \textbf{performance reports} tracking key metrics---delivered \textbf{clear written communications} suitable for \textbf{leadership consumption} under \textbf{time-sensitive} project conditions.}
+            \vspace{-2pt}
+            \resumeItem{\textbf{Demonstrated strong oral and written communication}: synthesized findings from \textbf{10+ stakeholders} and delivered \textbf{recommendations} in a \textbf{fast-paced, dynamic environment}---maintained \textbf{high attention to detail} across concurrent workstreams with \textbf{excellent organizational skills}.}
+          \resumeItemListEnd
+
+   \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\vspace{-16pt}
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+          {\textbf{AuraGlass} $|$ \emph{\textbf{Raspberry Pi 4, JavaScript, Bash, GitLab CI, OpenAI, Google Calendar, Spotify}}}{Oct 2024}
+    \resumeItemListStart
+        \resumeItem{Built a \textbf{consumer IoT device} on \textbf{Raspberry Pi 4}: modular \textbf{firmware-adjacent} JavaScript services behind a \textbf{Bash-orchestrated boot path}, integrating \textbf{Cloud APIs} (Google Calendar, Spotify, OpenAI) with \textbf{GitLab CI} for repeatable builds---demonstrating \textbf{end-to-end HW + FW + Apps + Cloud} system understanding.}
+        \vspace{-2pt}
+        \resumeItem{\textbf{Performed end-to-end system testing} across \textbf{7 modules}: \textbf{latency-budgeted} UI loops, \textbf{API quota handling}, and \textbf{graceful degradation} under throttle failures---\textbf{benchmarked $\sim$90\% scenario pass rate} on \textbf{acceptance scripts}, with \textbf{traceable test results} for each \textbf{integration spike}.}
+    \resumeItemListEnd
+    \vspace{-18pt}
+
+    \resumeProjectHeading
+        {\textbf{Alarmy} $|$ \emph{\textbf{Java, Arduino, Embedded C, Serial Protocol, Git}}}{Sept 2023}
+        \resumeItemListStart
+            \resumeItem{Engineered a \textbf{Java-hosted test harness} for \textbf{Arduino} (\textbf{embedded hardware}): \textbf{serial protocol tracing}, \textbf{timed actuator assertions}, and \textbf{Git-tracked fixtures}---performed \textbf{HW troubleshooting} and \textbf{debug} of \textbf{firmware} behaviors including \textbf{power-loss recovery} and \textbf{motor-drive fault injection}.}
+            \vspace{-2pt}
+            \resumeItem{\textbf{Developed 20+ test scripts} spanning wake windows, edge cases, and \textbf{hardware fault injection}; \textbf{published traceable QA artifacts} (15+ documented cases with inputs, oracle behavior, captured traces)---tightened \textbf{loop latency} to achieve \textbf{80\% measured pass rate} on full \textbf{test matrix}.}
+        \resumeItemListEnd
+    \vspace{-18pt}
+
+    \resumeProjectHeading
+        {\textbf{RefiMatch} $|$ \emph{\textbf{Python, FastAPI, Swift/SwiftUI, Kubernetes, pytest, GitHub Actions}}}{Apr 2026}
+        \resumeItemListStart
+            \resumeItem{\textbf{Developed $\sim$80 automated test scripts} (pytest) covering scoring logic, agent graph, and \textbf{system integration} across \textbf{30+ API contracts}; integrated \textbf{CI/CD} via \textbf{GitHub Actions} running automated linting and \textbf{test suites}---\textbf{improved test efficiency and reliability} across a full \textbf{end-to-end} delivery pipeline.}
+            \vspace{-2pt}
+            \resumeItem{\textbf{Designed system deployment plans} across \textbf{4 Kubernetes services} with \textbf{Docker} images and \textbf{Kustomize} manifests; built \textbf{automated validation checks} ensuring \textbf{data integrity}---repeatable, \textbf{environment-agnostic} test and deployment infrastructure from local to cloud.}
+        \resumeItemListEnd
+    \vspace{-8pt}
+
+    \resumeSubHeadingListEnd
+\vspace{-6pt}
+
+%-----------INVOLVEMENT---------------
+\section{Extracurriculars}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Events Director $|$ UW Product Management Club $|$ Waterloo, Canada}{Sept 2025 -- Dec 2025}
+      {}{}
+      \vspace{-13pt}
+      \resumeItemListStart
+      \vspace{-2pt}
+        \resumeItem{\textbf{Project schedule and coordination}: managed \textbf{end-to-end project execution} across venues, sponsors, and volunteers---tracked deliverables, \textbf{managed timelines}, and \textbf{communicated status} to stakeholders in a \textbf{fast-paced environment}.}
+        \vspace{-2pt}
+        \resumeItem{Demonstrated \textbf{strong coordination, written and oral communication skills}; \textbf{cross-functional} team leadership with \textbf{high attention to detail} and ability to \textbf{handle multiple concurrent tasks}.}
+      \resumeItemListEnd
+      \vspace{-5pt}
+    \resumeSubheading
+      {Campus Ambassador $|$ Velocity $|$ Waterloo, Canada}{Sept 2025 -- Dec 2025}
+      {}{}
+      \vspace{-13pt}
+      \resumeItemListStart
+      \vspace{-2pt}
+        \resumeItem{Managed \textbf{day-to-day operational activities} end-to-end including \textbf{distribution}, \textbf{logistics tracking}, and \textbf{real-time troubleshooting}---\textbf{adaptable} in a \textbf{dynamic, fast-paced} environment.}
+        \vspace{-2pt}
+        \resumeItem{\textbf{Technically savvy}: actively explored \textbf{emerging wireless and IoT technologies}; synthesized information for diverse audiences, demonstrating \textbf{strong communication} and \textbf{problem-solving skills}.}
+      \resumeItemListEnd
+      \vspace{-2pt}
+  \resumeSubHeadingListEnd
+\vspace{-13pt}
+
+\section{Certifications and Awards}
+    \resumeSubHeadingListStart
+      \item[]
+          \resumeItemListStart
+            \resumeItem{LinkedIn \textbf{Data Analysis Certification} $|$ \textbf{AWS Beginners} $|$ \textbf{Postman API} $|$ Won \textbf{Gold Sponsor --- TD Best AI Hack} at \textbf{GenAI Genesis 2026}}
+          \resumeItemListEnd
+          \vspace{-8pt}
+   \resumeSubHeadingListEnd
+
+\end{document}
