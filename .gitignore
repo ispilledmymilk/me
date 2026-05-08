@@ -12,7 +12,8 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-
+#resume files
+.tex
 # environment variables
 .env
 .env.production
