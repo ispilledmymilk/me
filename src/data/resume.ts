@@ -99,12 +99,12 @@ export const resume: Resume = {
   hero: {
     name: 'Sai Pranavi Kasturi',
     tagline:
-      'Computer Science (2B), University of Waterloo. I care about automation, testable systems, and full-stack delivery — and I use ML when it clearly improves the outcome.',
-    sticker: 'Waterloo CS · automation · quality',
+      'Computer Science (2B), University of Waterloo. I care about Site Reliability Engineering, DevOps, and production systems — making services scalable, maintainable, and hard to break.',
+    sticker: 'Waterloo CS · SRE · DevOps',
     headline: {
-      before: 'I ship ',
-      highlight: 'dependable software and strong automation',
-      after: ' — with machine learning when it actually moves the needle.',
+      before: 'I keep ',
+      highlight: 'production systems reliable and operable',
+      after: ' — automation, observability, and shipping with confidence.',
     },
   },
   booking: {
@@ -118,6 +118,15 @@ export const resume: Resume = {
       'BUILD RELIABLE SYSTEMS · AUTOMATE THE BORING PARTS · SHIP WITH CONFIDENCE · OPEN TO RECRUITMENT · ',
   },
   experience: [
+    {
+      title: 'Production Engineer Fellow',
+      company: 'Meta',
+      location: 'USA, Remote',
+      dates: 'June 2026 – Present',
+      bullets: [
+        'Selected for the Production Engineering Fellowship, gaining hands-on experience in Site Reliability Engineering, DevOps, and production systems focused on keeping services reliable, scalable, and maintainable.',
+      ],
+    },
     {
       title: 'Automation Developer',
       company: 'Zoocasa',
@@ -154,6 +163,25 @@ export const resume: Resume = {
     },
   ],
   projects: [
+    {
+      name: 'AndyDandy',
+      context: 'Waiting Room — park impulses until you are ready to act',
+      dates: 'Jul 2026',
+      stackByCategory: [
+        { label: 'Languages', items: ['Kotlin'] },
+        {
+          label: 'Android & UI',
+          items: ['Jetpack Compose', 'Kotlin Flow + Coroutines', 'ViewModel with MVI'],
+        },
+        { label: 'Data & persistence', items: ['Room'] },
+        { label: 'CI / delivery', items: ['Buildkite CI'] },
+      ],
+      bullets: [
+        'Built an Android Waiting Room app in Kotlin and Jetpack Compose: park impulses with a cool-down, then release, extend, or abandon when ripe — with an archive of past verdicts.',
+        'Structured the UI around MVI (Intent / State / Effect) with ViewModel, Kotlin Flow, and Coroutines for predictable async state updates.',
+        'Persisted waiting items and verdicts with Room; wired Buildkite CI via `.buildkite/pipeline.yml` for repeatable unit tests and debug builds.',
+      ],
+    },
     {
       name: 'RefiMatch',
       context: 'Refinance scenarios ranked with AI',
@@ -323,11 +351,29 @@ export const resume: Resume = {
     },
     {
       label: 'Languages & runtimes',
-      items: ['Python', 'Java', 'C++', 'GoLang', 'JavaScript', 'TypeScript', 'Node.js', 'Swift'],
+      items: [
+        'Python',
+        'Java',
+        'Kotlin',
+        'C++',
+        'GoLang',
+        'JavaScript',
+        'TypeScript',
+        'Node.js',
+        'Swift',
+      ],
     },
     {
       label: 'Mobile',
-      items: ['SwiftUI', 'iOS', 'Swift Package Manager'],
+      items: [
+        'SwiftUI',
+        'iOS',
+        'Swift Package Manager',
+        'Jetpack Compose',
+        'Kotlin Flow + Coroutines',
+        'Room',
+        'ViewModel with MVI (Intent / State / Effect)',
+      ],
     },
     {
       label: 'Python & data',
@@ -392,6 +438,7 @@ export const resume: Resume = {
         'Git',
         'GitHub',
         'GitLab CI',
+        'Buildkite CI',
         'Docker',
         'Vercel',
         'CI/CD',
