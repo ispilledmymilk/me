@@ -164,6 +164,32 @@ export const resume: Resume = {
   ],
   projects: [
     {
+      name: 'KineVision',
+      context: 'Compliance-first biomechanical coaching — enforces what you’re allowed to do',
+      dates: 'Jul 2026',
+      stackByCategory: [
+        { label: 'Languages', items: ['MATLAB', 'Python', 'C#', 'TypeScript'] },
+        {
+          label: 'Computer vision & ML',
+          items: ['OpenCV', 'MediaPipe', 'TensorFlow', 'Keras', 'NumPy'],
+        },
+        {
+          label: 'Realtime & 3D',
+          items: ['WebSockets', 'asyncio', 'Unity', 'skeletal retargeting'],
+        },
+        {
+          label: 'Cloud & backend',
+          items: ['Firebase Auth', 'Cloud Firestore', 'Cloud Functions', 'scheduled jobs'],
+        },
+      ],
+      bullets: [
+        'Built a compliance-first biomechanical coaching stack: most fitness CV products count reps — KineVision enforces authorized movements (deadlift, row, plank) and classifies/rejects overhead and bench-style presses.',
+        'Modeled spine/hip/shoulder ROM and torque proxies in MATLAB as versioned ground truth; ran a Python vision microservice with OpenCV low-light normalization, MediaPipe landmarks, temporal smoothing, an exercise state machine, and a TensorFlow/Keras press-rejection classifier on trajectory features.',
+        'Streamed (x, y, z) joints over WebSockets into a Unity (C#) avatar that flips spine color when lumbar flexion exceeds safe limits; persisted evening resistance summaries in Firebase (Auth, Firestore, Cloud Functions) and auto-compiled weekday form trends every Saturday.',
+        'Shipped as a vertical slice with interactive demo controls, eval metrics (precision/recall/F1), and honest documentation of what’s production-ready vs synthetic.',
+      ],
+    },
+    {
       name: 'Omenstream',
       context:
         'Prediction-market data pipeline — detect insider-like trading before markets resolve',
@@ -386,6 +412,8 @@ export const resume: Resume = {
       items: [
         'Python',
         'Scala',
+        'MATLAB',
+        'C#',
         'Java',
         'Kotlin',
         'C++',
@@ -406,6 +434,20 @@ export const resume: Resume = {
         'Kotlin Flow + Coroutines',
         'Room',
         'ViewModel with MVI (Intent / State / Effect)',
+      ],
+    },
+    {
+      label: 'Computer vision & ML',
+      items: [
+        'OpenCV',
+        'MediaPipe',
+        'TensorFlow',
+        'Keras',
+        'NumPy',
+        'feature engineering',
+        'temporal smoothing / hysteresis',
+        'classification eval (precision/recall/F1)',
+        'biomechanical modeling',
       ],
     },
     {
@@ -430,13 +472,22 @@ export const resume: Resume = {
       label: 'Python & data',
       items: [
         'Pandas',
-        'NumPy',
         'Matplotlib',
         'SciPy',
         'PyTorch',
         'scikit-learn',
         'Isolation Forest',
         'LangChain',
+        'asyncio',
+      ],
+    },
+    {
+      label: '3D & interactive',
+      items: [
+        'Unity',
+        'C# scripting',
+        'skeletal retargeting / joint mapping',
+        'UI feedback systems',
       ],
     },
     {
@@ -457,6 +508,7 @@ export const resume: Resume = {
         'WebSockets',
         'OAuth 2.0',
         'Pydantic',
+        'JSON',
       ],
     },
     {
@@ -473,6 +525,7 @@ export const resume: Resume = {
         'pgvector',
         'Parquet',
         'GCS',
+        'Cloud Firestore',
       ],
     },
     {
@@ -510,7 +563,12 @@ export const resume: Resume = {
         'Kustomize',
         'Terraform',
         'GCP',
+        'Firebase Authentication',
+        'Cloud Functions',
+        'scheduled jobs',
+        'Firebase security rules',
         'Monorepo',
+        'ground-truth versioning',
         'observability',
         'Prometheus',
         'Grafana',
@@ -538,6 +596,8 @@ export const resume: Resume = {
         'pytest',
         'Ruff',
         'Testcontainers',
+        'portfolio regression harness',
+        'session aggregation',
         'VS Code API',
         'Radon',
         'Arduino',
