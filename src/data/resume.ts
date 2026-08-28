@@ -48,6 +48,7 @@ export interface ProjectItem {
   name: string;
   context?: string;
   dates: string;
+  repoUrl?: string;
   stackByCategory: ProjectStackGroup[];
   bullets: string[];
 }
@@ -225,6 +226,7 @@ export const resume: Resume = {
       name: 'AndyDandy',
       context: 'Waiting Room — park impulses until you are ready to act',
       dates: 'Jul 2026',
+      repoUrl: 'https://github.com/ispilledmymilk/andydandy',
       stackByCategory: [
         { label: 'Languages', items: ['Kotlin'] },
         {
@@ -232,12 +234,12 @@ export const resume: Resume = {
           items: ['Jetpack Compose', 'Kotlin Flow + Coroutines', 'ViewModel with MVI'],
         },
         { label: 'Data & persistence', items: ['Room'] },
-        { label: 'CI / delivery', items: ['Buildkite CI'] },
+        { label: 'CI / delivery', items: ['Buildkite CI', 'Gradle'] },
       ],
       bullets: [
-        'Built an Android Waiting Room app in Kotlin and Jetpack Compose: park impulses with a cool-down, then release, extend, or abandon when ripe — with an archive of past verdicts.',
-        'Structured the UI around MVI (Intent / State / Effect) with ViewModel, Kotlin Flow, and Coroutines for predictable async state updates.',
-        'Persisted waiting items and verdicts with Room; wired Buildkite CI via `.buildkite/pipeline.yml` for repeatable unit tests and debug builds.',
+        'Built an Android Waiting Room app in Kotlin and Jetpack Compose: park impulses with a cool-down timer, then release, extend, or abandon when ripe — with an archive of past verdicts.',
+        'Structured the UI around MVI (Intent / State / Effect) with ViewModel, Kotlin Flow, and Coroutines for predictable async state updates across waiting, ripe, and archive flows.',
+        'Persisted waiting items and verdicts with Room; wired Buildkite CI via `.buildkite/pipeline.yml` for repeatable `testDebugUnitTest` and `assembleDebug` builds.',
       ],
     },
     {

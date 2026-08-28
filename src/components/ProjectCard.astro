@@ -14,7 +14,22 @@ const tone =
 <article class:list={[tone]}>
   <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
     <div>
-      <h3 class="font-serif text-xl font-semibold text-plm-ink">{item.name}</h3>
+      <h3 class="font-serif text-xl font-semibold text-plm-ink">
+        {
+          item.repoUrl ? (
+            <a
+              href={item.repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline decoration-plm-sky-deep/40 underline-offset-2 transition hover:text-plm-sky-deep hover:decoration-plm-sky-deep"
+            >
+              {item.name}
+            </a>
+          ) : (
+            item.name
+          )
+        }
+      </h3>
       {item.context && <p class="mt-1 text-sm italic text-plm-muted">{item.context}</p>}
     </div>
     <p class="font-mono text-xs text-plm-muted sm:text-sm">{item.dates}</p>
